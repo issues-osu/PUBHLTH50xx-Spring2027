@@ -222,23 +222,23 @@
   {
     "objectID": "labs/week01.html",
     "href": "labs/week01.html",
-    "title": "Week 1: Why Data Is Never Neutral",
+    "title": "Week 1: Data as Social Construct",
     "section": "",
     "text": "Theme: The Social Construction of Public Health Evidence\nEvery dataset reflects choices about what to count, who counts, and who decides. This week we examine how framing shapes public health evidence and how administrative law and agency power turn 'data' into 'crisis.' We introduce R Markdown for reproducible reporting and explore publicly available health data resources. We also examine the Google Flu Trends episode as a cautionary tale about how big data can mislead as well as illuminate. Note: Monday January 18 is Martin Luther King Jr. Day — no classes. Week 2 begins Tuesday January 19.",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Why Data Is Never Neutral</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Data as Social Construct</span>"
     ]
   },
   {
     "objectID": "labs/week01.html#classroom-lab-demonstration",
     "href": "labs/week01.html#classroom-lab-demonstration",
-    "title": "Week 1: Why Data Is Never Neutral",
+    "title": "Week 1: Data as Social Construct",
     "section": "Classroom Lab Demonstration",
     "text": "Classroom Lab Demonstration\nLegal Focus: Administrative law and the power of health agencies (CDC, FDA) to define 'crisis' through mandatory data reporting standards; the Paperwork Reduction Act and federal data collection authority.\nHealth Focus: How surveillance data shapes resource allocation and public health response; limitations of administrative data in capturing structural drivers of health.\nData: CDC BRFSS (Behavioral Risk Factor Surveillance System, cdc.gov/brfss); CDC NHIS (National Health Interview Survey, cdc.gov/nchs/nhis); CDC ILINet influenza surveillance data (gis.cdc.gov/grasp/fluview).\nR Code: R Markdown setup and YAML headers; loading CSV data with readr; exploring codebooks; computing frequency tables with dplyr (group_by, summarise, count); basic ggplot2 bar charts; knitting to HTML.\n\nInitialize GitHub repository; create a new .Rmd file with YAML header (title, author, date, output: html_document)\nLoad the provided BRFSS subset from Carmen using read_csv(); examine variable names and class with glimpse() and head()\nCompute the prevalence of 3 health outcomes by state using group_by() and summarise(); display as a sorted bar chart in ggplot2\nLoad CDC ILINet weekly flu surveillance CSV (provided on Carmen); plot a time series of influenza-like illness (ILI) rates by week using ggplot2 geom_line(); compare pre- and post-2009 pandemic patterns\nKnit the completed document to HTML; review the output and discuss: what does the ILINet data measure, and what does it miss?",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Why Data Is Never Neutral</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Data as Social Construct</span>"
     ]
   },
   {
@@ -508,45 +508,45 @@
   {
     "objectID": "labs/week14.html",
     "href": "labs/week14.html",
-    "title": "Week 14: Speaking Truth to Power",
+    "title": "Week 14: Translating Evidence into Action",
     "section": "",
     "text": "Theme: Policy Briefs, Stakeholder Presentations, and Legal Advocacy\nData that never leaves the research file cabinet changes nothing. This week we shift from analysis to advocacy. We screen and discuss selected Assignment 4 community data story presentations as case studies in science communication. Peer evaluation of Assignment 4 is due this week. We begin curating and polishing the Final Portfolio.",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Speaking Truth to Power</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Translating Evidence into Action</span>"
     ]
   },
   {
     "objectID": "labs/week14.html#classroom-lab-demonstration",
     "href": "labs/week14.html#classroom-lab-demonstration",
-    "title": "Week 14: Speaking Truth to Power",
+    "title": "Week 14: Translating Evidence into Action",
     "section": "Classroom Lab Demonstration",
     "text": "Classroom Lab Demonstration\nLegal Focus: Legislative lobbying disclosure rules for 501(c)(3) organizations (IRS 501(h) election); the distinction between lobbying (restricted) and advocacy (permissible for nonprofits); community benefits agreements as legally binding contracts between developers and community organizations.\nHealth Focus: Science communication as a public health practice; translating epidemiological findings into language that compels action; the WHO storytelling framework for health impact; how assignment 4 presentations can be evaluated for effectiveness with non-expert audiences.\nData: Synthesis of all course datasets; GitHub repository structure for reproducible reporting; peer evaluation rubric for Assignment 4 (provided on Carmen).\nR Code: Final polish on any Shiny app elements; GitHub CLI or RStudio Git pane for repository commits; R Markdown framing notes for curated lab submissions; rmarkdown::render() to batch-knit multiple lab files.\n\nScreen and discuss 3-4 selected Assignment 4 presentations as class case studies; complete peer evaluation rubric\nWorkshop: translating a regression coefficient table into 3-bullet executive insights for a city council memo\nGitHub lab: set up Final Portfolio repository structure (README.md, data/, analysis/, policy-memo/, reflection/)\nBegin drafting the new 3-page synthesis policy memo for the Final Portfolio",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Speaking Truth to Power</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Translating Evidence into Action</span>"
     ]
   },
   {
     "objectID": "labs/week15.html",
     "href": "labs/week15.html",
-    "title": "Week 15: The Evidence-to-Power Pipeline",
+    "title": "Week 15: Putting it all together",
     "section": "",
     "text": "Theme: Ethics, Community Ownership, and the Future of Public Health\nData Science\nWho benefits when community data is published? Who controls it? Community Benefits Agreements, data sovereignty frameworks, and Indigenous data rights raise fundamental questions about the ethics of research-for-policy. We also reflect on the semester's arc and discuss where the field is heading: federated learning, synthetic data, and the risks and opportunities of large language models in population health surveillance.",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: The Evidence-to-Power Pipeline</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: Putting it all together</span>"
     ]
   },
   {
     "objectID": "labs/week15.html#classroom-lab-demonstration",
     "href": "labs/week15.html#classroom-lab-demonstration",
-    "title": "Week 15: The Evidence-to-Power Pipeline",
+    "title": "Week 15: Putting it all together",
     "section": "Classroom Lab Demonstration",
     "text": "Classroom Lab Demonstration\nLegal Focus: Community Benefits Agreements as legally binding contracts between municipalities/developers and community organizations; data sovereignty frameworks and Indigenous data rights (CARE Principles); IRB ethics and community-engaged research standards; FERPA, HIPAA, and the limits of de-identification.\nHealth Focus: The evidence-to-power gap: why rigorous data often fails to change policy; community-engaged research as an alternative model; the future of public health data science — federated learning, synthetic data generation, and large language models as population health surveillance tools.\nData: Synthesis and curation of the semester's lab work; GitHub repository as a professional portfolio artifact; peer portfolio audit checklist (provided on Carmen).\nR Code: rmarkdown::render() with clean environment to test reproducibility; usethis::use_readme_md() and usethis::use_github() for portfolio finalization; git commit and push from RStudio Git pane; final review of all code annotations and inline comments.\n\nConduct structured peer audit of a classmate's GitHub portfolio using provided checklist rubric\nFinalize GitHub repository structure: README.md, data/, analysis/ (3 curated labs), policy-memo/, reflection/\nPolish all R Markdown reports — ensure code is annotated, outputs are labeled, and each document knits cleanly from a fresh session\nWrite 400-word self-reflection: What did data show that policy missed?",
     "crumbs": [
       "Weekly R Labs",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: The Evidence-to-Power Pipeline</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: Putting it all together</span>"
     ]
   },
   {
