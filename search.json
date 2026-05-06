@@ -170,43 +170,13 @@
     ]
   },
   {
-    "objectID": "rcode.html",
-    "href": "rcode.html",
-    "title": "R Code Resources",
-    "section": "",
-    "text": "Weekly Lab Templates\nThis page will house all R code templates, functions, and scaffolding used in the weekly lab sessions.\nBelow are the foundational scripts for our spatial and NLP analyses.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R Code Resources</span>"
-    ]
-  },
-  {
-    "objectID": "rcode.html#weekly-lab-templates",
-    "href": "rcode.html#weekly-lab-templates",
-    "title": "R Code Resources",
-    "section": "",
-    "text": "Week 1: Introduction to Tidyverse (.qmd)\nWeek 2: Spatial Joins with sf (.qmd)\nWeek 5: Bivariate Mapping with biscale (.qmd)\nWeek 6: NLP and regex with tidytext (.qmd)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R Code Resources</span>"
-    ]
-  },
-  {
-    "objectID": "rcode.html#helper-functions",
-    "href": "rcode.html#helper-functions",
-    "title": "R Code Resources",
-    "section": "Helper Functions",
-    "text": "Helper Functions\nDuring the course, we will use a custom check_answer() function to validate lab output. You can find the source code below:\n# Custom validation function\ncheck_answer &lt;- function(student_val, expected_val, tolerance = 0.01) {\n  if (is.numeric(student_val) && is.numeric(expected_val)) {\n    if (abs(student_val - expected_val) &lt;= tolerance) {\n      message(\"Correct!\")\n    } else {\n      warning(\"Incorrect. Try checking your group_by or summarise logic.\")\n    }\n  } else {\n    if (identical(student_val, expected_val)) {\n      message(\"Correct!\")\n    } else {\n      warning(\"Incorrect. Check your spelling or formatting.\")\n    }\n  }\n}",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>R Code Resources</span>"
-    ]
-  },
-  {
     "objectID": "datasets.html",
     "href": "datasets.html",
     "title": "Datasets",
     "section": "",
     "text": "Publicly Available Datasets\nThis page catalogs all public datasets and proprietary extracts we will use throughout the semester.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Datasets</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Datasets</span>"
     ]
   },
   {
@@ -216,7 +186,7 @@
     "section": "",
     "text": "Dataset Name\nSource\nFormat\n\n\n\n\nOpportunity Atlas\nOpportunity Insights\nCSV / Tract-level\n\n\nHOLC “Redlining” Maps\nMapping Inequality\nShapefiles\n\n\nPLACES: Local Data for Better Health\nCDC\nCSV / Tract-level\n\n\nSocial Vulnerability Index (SVI)\nCDC ATSDR\nCSV / Shapefile\n\n\nEJScreen Environmental Justice Tool\nEPA\nCSV / Geodatabase\n\n\nChicago Violence Reduction\nChicago Data Portal\nCSV / Point data\n\n\nNEISS IPV Narrative Subset\nCPSC NEISS\nText / CSV\n\n\nOhio MOUD Providers\nSAMHSA\nCSV / Spatial\n\n\nBoston Neighborhood Survey (BNS)\nBNS Data\nLongitudinal CSV",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Datasets</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Datasets</span>"
     ]
   },
   {
@@ -226,7 +196,7 @@
     "section": "",
     "text": "Class Policies",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Course Policies</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course Policies</span>"
     ]
   },
   {
@@ -236,7 +206,7 @@
     "section": "",
     "text": "Attendance\nAttendance is expected at all lecture and Classroom Lab Demonstration sessions. The lab demonstration is the foundation for the self-graded weekly lab — missing it creates gaps that are hard to fill independently. Please notify the instructor before class when you must be absent. More than 3 unexcused absences will reduce your participation grade by one letter grade per additional absence. If you miss the in-class demonstration, the self-graded R Markdown lab is still due on Sunday.\n\n\nLate Work\nSelf-graded labs: accepted up to one week late for half credit (0.5 pts); no credit after one week. Assignments 1-4: 10% deduction per calendar day late; assignments more than 7 days late receive zero credit without prior written approval from the instructor. Final Portfolio: a 72-hour extension must be requested in writing before the deadline; no further extensions granted.\n\n\nGenerative AI Policy\nGenerative AI tools (ChatGPT, Claude, Copilot, etc.) may be used as a writing or coding aid for self-graded lab assignments and the Final Portfolio with mandatory disclosure. Any AI use must be documented in a brief AI Use Statement at the end of your submission specifying which tool was used, for what purpose, and what you changed or verified. AI tools may not be used to generate the substantive policy analysis or interpretive writing in Assignments 3 or 4 — these must reflect your own reasoning. Undisclosed AI use constitutes academic misconduct.\n\n\nSafe Messaging — Sensitive Topics\nThis course addresses suicide, self-harm, intimate partner violence, substance use, and child abuse. We handle all these topics with scholarly rigor and human dignity. If content is distressing, please reach out to the instructor, your GTA, or OSU Counseling and Consultation Services (CCS) at ccs.osu.edu or 614-292-5766. Crisis line: dial 988 at any time.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Course Policies</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course Policies</span>"
     ]
   },
   {
@@ -246,7 +216,359 @@
     "section": "University Policies",
     "text": "University Policies\n\nDisability Services\nThe university strives to maintain a healthy and accessible environment to support student learning. If you anticipate or experience academic barriers based on your disability, please let me know immediately. To establish reasonable accommodations, please register with Student Life Disability Services (slds@osu.edu; 614-292-3307; slds.osu.edu).\n\n\nMental Health Services\nAs a student you may experience a range of issues that can cause barriers to learning. The Ohio State University offers services to assist you with addressing these concerns via the Office of Student Life’s Counseling and Consultation Service (CCS) by visiting ccs.osu.edu or calling 614-292-5766. 24 hour emergency help is also available 24/7 by dialing 988 to reach the Suicide and Crisis Lifeline.\n\n\nReligious Accommodations\nOhio State has a longstanding practice of making reasonable academic accommodations for students’ religious beliefs and practices. Students must be in early communication with their instructors regarding any known accommodation requests within 14 days after the first instructional day of the course.\n\n\nAcademic Misconduct\nIt is the responsibility of the Committee on Academic Misconduct to investigate or establish procedures for the investigation of all reported cases of student academic misconduct. The term ‘academic misconduct’ includes all forms of student academic misconduct wherever committed; illustrated by, but not limited to, cases of plagiarism and dishonest practices in connection with examinations.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Course Policies</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course Policies</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week01.html",
+    "href": "labs/week01.html",
+    "title": "Week 1: Why Data Is Never Neutral",
+    "section": "",
+    "text": "Theme: The Social Construction of Public Health Evidence\nEvery dataset reflects choices about what to count, who counts, and who decides. This week we examine how framing shapes public health evidence and how administrative law and agency power turn 'data' into 'crisis.' We introduce R Markdown for reproducible reporting and explore publicly available health data resources. We also examine the Google Flu Trends episode as a cautionary tale about how big data can mislead as well as illuminate. Note: Monday January 18 is Martin Luther King Jr. Day — no classes. Week 2 begins Tuesday January 19.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Why Data Is Never Neutral</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week01.html#classroom-lab-demonstration",
+    "href": "labs/week01.html#classroom-lab-demonstration",
+    "title": "Week 1: Why Data Is Never Neutral",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Administrative law and the power of health agencies (CDC, FDA) to define 'crisis' through mandatory data reporting standards; the Paperwork Reduction Act and federal data collection authority.\nHealth Focus: How surveillance data shapes resource allocation and public health response; limitations of administrative data in capturing structural drivers of health.\nData: CDC BRFSS (Behavioral Risk Factor Surveillance System, cdc.gov/brfss); CDC NHIS (National Health Interview Survey, cdc.gov/nchs/nhis); CDC ILINet influenza surveillance data (gis.cdc.gov/grasp/fluview).\nR Code: R Markdown setup and YAML headers; loading CSV data with readr; exploring codebooks; computing frequency tables with dplyr (group_by, summarise, count); basic ggplot2 bar charts; knitting to HTML.\n\nInitialize GitHub repository; create a new .Rmd file with YAML header (title, author, date, output: html_document)\nLoad the provided BRFSS subset from Carmen using read_csv(); examine variable names and class with glimpse() and head()\nCompute the prevalence of 3 health outcomes by state using group_by() and summarise(); display as a sorted bar chart in ggplot2\nLoad CDC ILINet weekly flu surveillance CSV (provided on Carmen); plot a time series of influenza-like illness (ILI) rates by week using ggplot2 geom_line(); compare pre- and post-2009 pandemic patterns\nKnit the completed document to HTML; review the output and discuss: what does the ILINet data measure, and what does it miss?",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Week 1: Why Data Is Never Neutral</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week02.html",
+    "href": "labs/week02.html",
+    "title": "Week 2: Redlining, Race, and the Geography of Illness",
+    "section": "",
+    "text": "Theme: Historical Policy Echoes: How the Past Becomes the Present\nThe 1930s Home Owners' Loan Corporation did not just deny mortgages — it engineered the geography of life expectancy. This week we trace the legal history of state-sponsored residential segregation and its direct, measurable effects on contemporary health outcomes. We introduce the Opportunity Atlas, begin working with HOLC shapefiles and spatial joins, and introduce HMDA mortgage data as a tool for documenting present-day lending discrimination. This week's lab is the technical foundation for Assignment 1, due next Friday.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 2: Redlining, Race, and the Geography of Illness</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week02.html#classroom-lab-demonstration",
+    "href": "labs/week02.html#classroom-lab-demonstration",
+    "title": "Week 2: Redlining, Race, and the Geography of Illness",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Fair Housing Act of 1968; HOLC (Home Owners' Loan Corporation) as state-sponsored residential segregation; Home Mortgage Disclosure Act (HMDA, 1975) as a legal transparency and accountability tool requiring lenders to report application outcomes by race.\nHealth Focus: How 1930s government lending grades produced neighborhood-level health disparities in life expectancy, preterm birth, cardiovascular disease, and firearm injury that persist today.\nData: University of Richmond Mapping Inequality HOLC shapefiles (dsl.richmond.edu/panorama/redlining); Opportunity Atlas tract-level outcome data (opportunityinsights.org/data); ACS life expectancy estimates via tidycensus; HMDA Ohio mortgage application data (Consumer Financial Protection Bureau, ffiec.cfpb.gov/hmda).\nR Code: sf::st_read() for shapefiles; tidycensus::get_acs() for ACS data; sf::st_join() for spatial joins by GEOID; ggplot2 choropleth maps with geom_sf() and scale_fill_viridis_c(); dplyr summarise() to compute group means by HOLC grade.\n\nLoad University of Richmond HOLC shapefiles for Columbus using sf::st_read()\nLoad ACS life expectancy data at census tract level via tidycensus::get_acs()\nPerform spatial join: match HOLC grade polygons to modern census tracts by GEOID using sf::st_join()\nCalculate mean life expectancy per HOLC grade; produce a bar chart and choropleth map in ggplot2\nPreview Opportunity Atlas data: load CSV, filter to Ohio (state FIPS = 39), explore variables kfr_black_female_p25, kfr_white_female_p25 — full analysis due as Assignment 1 next Friday\nLoad Ohio HMDA data subset from Carmen; compute loan denial rates by applicant race; map at census tract level; overlay with HOLC boundaries",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Week 2: Redlining, Race, and the Geography of Illness</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week03.html",
+    "href": "labs/week03.html",
+    "title": "Week 3: Mapping What We See and What We Fear",
+    "section": "",
+    "text": "Theme: The Built Environment: Street-Level Data and Perceived Safety\nDoes a neighborhood feel safe? And does that feeling match reality? Street-level imagery and computer vision tools allow us to quantify the perceived environment — but also raise profound questions about surveillance, privacy, and whose fear gets measured. This week we map the built environment using OpenStreetMap and introduce heat map visualization of perception data.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 3: Mapping What We See and What We Fear</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week03.html#classroom-lab-demonstration",
+    "href": "labs/week03.html#classroom-lab-demonstration",
+    "title": "Week 3: Mapping What We See and What We Fear",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Privacy law and the Fourth Amendment in public space; legal implications of using street-level imagery for government public health surveillance; informed consent and passive data collection.\nHealth Focus: How the physical characteristics of neighborhood environments (lighting, vacancy, greenspace) shape perceived safety and mental health through environmental stress pathways.\nData: OpenStreetMap via the osmdata R package (openstreetmap.org); SafeGraph foot traffic data (safegraph.com — provided via Carmen for academic use); vacancy rate data from ACS via tidycensus.\nR Code: osmdata::opq() and osmdata::add_osm_feature() to query OSM; sf::st_as_sf() to convert to spatial object; ggplot2 geom_sf() for dot maps and heat maps; biscale package for bivariate choropleth mapping of two variables simultaneously.\n\nQuery OpenStreetMap for Columbus street network and building footprints using osmdata R package\nLoad ACS vacancy rate data at census tract level via tidycensus; compute vacancy quartiles\nProduce a bivariate choropleth map of streetlight density vs. vacancy rates using the biscale package in R\nIdentify 3 spatial outliers where perceived safety (perception score) diverges from infrastructure data (vacancy, lighting)",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Week 3: Mapping What We See and What We Fear</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week04.html",
+    "href": "labs/week04.html",
+    "title": "Week 4: Social Cohesion and Health",
+    "section": "",
+    "text": "Theme: Collective Efficacy, Trust, and Community Health\nRobert Sampson's landmark Chicago research established that collective efficacy — a neighborhood's shared willingness to intervene for the common good — is one of the strongest predictors of health and safety outcomes, independent of poverty. This week we map social vulnerability alongside CDC PLACES health outcome data, focusing on variables that capture social isolation and lack of emotional support — dimensions of health that are often invisible in administrative data. We build bivariate maps that visually communicate the relationship between neighborhood social conditions and population health.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 4: Social Cohesion and Health</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week04.html#classroom-lab-demonstration",
+    "href": "labs/week04.html#classroom-lab-demonstration",
+    "title": "Week 4: Social Cohesion and Health",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Home Rule and local governance authority; Fair Housing Act and exclusionary zoning; legal frameworks for community health investment; ARPA (American Rescue Plan Act) and community health block grant allocation criteria.\nHealth Focus: CDC PLACES health outcome data, specifically the 'Lack of Social and Emotional Support' measure (CASTHMA model) and 'Mental Health Not Good' variable — two outcomes that track closely with neighborhood collective efficacy and social isolation.\nData: CDC Social Vulnerability Index (SVI), 2020, available at atsdr.cdc.gov/placeandhealth/svi; CDC PLACES Local Data for Better Health (tract-level), available at cdc.gov/places — specifically variables CASTHMA (current asthma), MHLTH (mental health), SOCIAL (lack of social and emotional support), and CSMOKING.\nR Code: Read SVI and PLACES CSV files; merge by GEOID using dplyr::left_join(); biscale package for bivariate choropleth (biscale::bi_class(), bi_legend()); ggplot2 geom_sf() with two-variable color encoding; cowplot::plot_grid() to combine map and legend.\n\nLoad CDC SVI 2020 data and CDC PLACES tract-level data for Ohio, both available as CSV download from CDC websites\nMerge SVI and PLACES by census tract GEOID using dplyr::left_join()\nProduce Bivariate Map 1: SVI overall score (x-axis) vs. PLACES 'Lack of Social and Emotional Support' (SOCIAL variable, y-axis) using biscale package; identify tracts in the High-High quadrant\nProduce Bivariate Map 2: SVI overall score (x-axis) vs. PLACES 'Mental Health Not Good' (MHLTH variable, y-axis); compare geographic pattern to Map 1\nDiscuss: which tracts appear as high-burden on both maps? What does the spatial pattern suggest about where collective efficacy is lowest?",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Week 4: Social Cohesion and Health</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week05.html",
+    "href": "labs/week05.html",
+    "title": "Week 5: Who Does the Algorithm Think You Are?",
+    "section": "",
+    "text": "Theme: Algorithmic Accountability, Bias, and Political Geography\nPredictive risk models now influence who gets flagged for child welfare investigation, who is triaged first in an emergency department, and who qualifies for housing assistance. Crucially, these algorithms are built on data that is itself shaped by political decisions — including redistricting, which determines who votes in which district and thus which communities get political representation and public investment. This week we examine algorithmic bias in public health AND explore how redistricting data can reveal political geographies of health inequity.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Week 5: Who Does the Algorithm Think You Are?</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week05.html#classroom-lab-demonstration",
+    "href": "labs/week05.html#classroom-lab-demonstration",
+    "title": "Week 5: Who Does the Algorithm Think You Are?",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Due process and algorithmic decision-making in government; disparate impact doctrine under Title VI and the Civil Rights Act; the Voting Rights Act and redistricting as a legal framework for political representation; prison gerrymandering.\nHealth Focus: How political geography (district boundaries) shapes public health investment; whether communities with high health burden are systematically gerrymandered out of political representation; the connection between algorithmic bias in public health systems and structural racism.\nData: Redistricting Data Hub, Ohio state page (redistrictingdatahub.org/data/ohio): 2020 Census Block PL 94-171 data; 2023 ACS Poverty and Race data at the census tract level; 2024 General Election Precinct-Level Results; Approved 2025 Congressional Districts. All free downloads after free account registration.\nR Code: Download shapefiles from Redistricting Data Hub; load with sf::st_read(); join ACS poverty and race data by GEOID; map congressional district boundaries overlaid on health outcome data (PLACES) or SVI; compute summary statistics of health burden by congressional district.\n\nDownload the 2025 Approved Ohio Congressional District boundaries shapefile from Redistricting Data Hub (redistrictingdatahub.org/data/ohio)\nDownload the 2023 ACS Census Tract Race Data and Poverty Data for Ohio from Redistricting Data Hub\nLoad both datasets in R using sf::st_read() and read_csv(); join by GEOID\nPerform a spatial join to assign each census tract to its congressional district using sf::st_join()\nCompute mean poverty rate and racial composition by congressional district; produce a bar chart comparing district-level poverty rates; identify which districts represent the highest-burden communities",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Week 5: Who Does the Algorithm Think You Are?</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week06.html",
+    "href": "labs/week06.html",
+    "title": "Week 6: The Stories Clinical Data Won’t Tell You",
+    "section": "",
+    "text": "Theme: NLP and Injury Surveillance: Reading the Invisible\nStructured data — ICD codes, admission diagnoses — systematically misses the context of injury. A woman admitted for 'facial trauma' may be a survivor of intimate partner violence; a child coded for 'accidental fall' may have been pushed. This week we use natural language processing to extract hidden injury mechanisms from ED narratives and introduce the CourtListener API for scraping and analyzing public health caselaw.\nAssignment 2 Check-In: Assignment 2 is due Friday Feb 27 — one week from now. By this point you should have: (1) chosen your community health topic (gun violence, maternal health, opioid overdose, IPV, or ACEs); (2) identified at least two datasets from the course data catalog that you will use; and (3) decided on a geographic area (Franklin County, another Ohio county, or a city). If you have not done these three things, use this weekend to finalize your choices and begin downloading your data.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Week 6: The Stories Clinical Data Won't Tell You</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week06.html#classroom-lab-demonstration",
+    "href": "labs/week06.html#classroom-lab-demonstration",
+    "title": "Week 6: The Stories Clinical Data Won’t Tell You",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Burden of proof and narrative evidence in civil litigation; how text-based data extraction is used to establish patterns of systematic harm; the Free Law Project and public access to federal court decisions via CourtListener (courtlistener.com).\nHealth Focus: The gap between structured ICD-coded injury data and the actual mechanisms of harm recorded in clinical narratives; intimate partner violence as a systematically undercoded diagnosis; natural language processing as an injury surveillance tool.\nData: NEISS (National Electronic Injury Surveillance System) narrative data subset (provided on Carmen, from cpsc.gov/Research--Statistics/NEISS-Injury-Data); CourtListener federal court decision API (courtlistener.com/help/api); CDC NVDRS narrative excerpts (Carmen, IRB-approved subset).\nR Code: tidytext::unnest_tokens() for tokenization; tidytext::bind_tf_idf() for TF-IDF analysis; stringr::str_detect() and regex patterns for mechanism extraction; httr::GET() and jsonlite::fromJSON() for CourtListener API calls; ggplot2 for frequency bar charts and timeline plots.\n\nLoad NEISS narrative data subset from Carmen; use tidytext to tokenize narratives and compute TF-IDF by injury type and sex\nExtract mechanism categories (Object, Action, Location) using regex and keyword dictionaries provided on Carmen\nCourtListener lab: make httr::GET() API calls to search for federal IPV + housing cases; download case metadata (court, date, docket number); produce a timeline of caselaw by federal circuit\nOptional: pass 20 anonymized ED narratives to an LLM API for mechanism classification; compare output to regex results",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Week 6: The Stories Clinical Data Won't Tell You</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week07.html",
+    "href": "labs/week07.html",
+    "title": "Week 7: Where You Live Is Your Health",
+    "section": "",
+    "text": "Theme: Legal, Physical & Social Determinants: Environmental Justice\nand Zoning\nIndustrial zoning is not random. Historically, hazardous facilities were sited near communities with the least political power. This week we use EPA EJScreen data, buffer analysis, and spatial joins to identify residential clusters at highest risk of lead exposure. We examine the legal doctrine of 'police power' and two landmark health policy studies: the Oregon Medicaid experiment and the Clean Air Act's long-term consequences for children's earnings.\nAssignment 2 Check-In: Assignment 2 is due tonight (Friday Feb 27). Your submission should include: (1) a choropleth map of your chosen health topic by census tract or county; (2) a spatial cluster analysis or buffer/join identifying where burden concentrates; (3) at least one social determinant overlay layer; (4) a 500-word policy implications section. If your R Markdown document is not knitting correctly, bring your error message to office hours or post to Carmen by 5 PM today.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Week 7: Where You Live Is Your Health</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week07.html#classroom-lab-demonstration",
+    "href": "labs/week07.html#classroom-lab-demonstration",
+    "title": "Week 7: Where You Live Is Your Health",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Police power doctrine and its use to justify zoning regulations; NEPA (National Environmental Policy Act) environmental impact assessment requirements; Clean Air Act enforcement history; Justice40 Initiative requiring 40% of federal environmental investment to flow to disadvantaged communities.\nHealth Focus: Cumulative environmental burden — the compounding of multiple environmental hazards (air pollution, proximity to industrial sites, lack of greenspace) in the same neighborhoods — and its relationship to lead exposure, asthma, and childhood developmental outcomes.\nData: EPA EJScreen Environmental Justice Mapping Tool (ejscreen.epa.gov — download data or use API); Franklin County municipal zoning shapefile (provided on Carmen from county GIS portal); CDC Social Vulnerability Index 2020 (atsdr.cdc.gov/placeandhealth/svi); HMDA Ohio mortgage data (ffiec.cfpb.gov/hmda).\nR Code: QGIS: Buffer tool (Vector &gt; Geoprocessing Tools &gt; Buffer) at 500m around industrial parcels; Vector &gt; Data Management &gt; Join attributes by location. R: sf::st_buffer(); sf::st_join(); dplyr::summarise() to count residential parcels and population within buffers; ggplot2 choropleth of compound vulnerability scores.\n\nImport EPA EJScreen data for Franklin County into QGIS; map cumulative environmental burden index by census tract\nImport municipal zoning shapefile; create 500m buffers around all industrial-zoned parcels using QGIS Buffer tool\nPerform spatial join to identify residential parcels and school locations within high-risk industrial buffers\nJoin with CDC SVI in R to calculate compound vulnerability scores for exposed populations; produce choropleth map\nLoad Ohio HMDA subset; compute loan denial rates by race and census tract; map overlaid with EJScreen burden index",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Week 7: Where You Live Is Your Health</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week08.html",
+    "href": "labs/week08.html",
+    "title": "Week 8: When Pregnancy Meets Poverty",
+    "section": "",
+    "text": "Theme: Maternal Health: Structural Racism, Geographic Disparities, and\nBirth Outcomes\nThe United States spends more on health care than any comparable nation and has the worst maternal mortality rate among high-income countries. Black women are more than three times as likely as white women to experience a pregnancy-related death — a disparity that persists after controlling for income, education, and comorbidities. This week we use the Washington Tracking Network's publicly available preterm birth data to build spatial maps of birth outcome disparities, examining how geography intersects with race and economic stress to shape the conditions of birth.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Week 8: When Pregnancy Meets Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week08.html#classroom-lab-demonstration",
+    "href": "labs/week08.html#classroom-lab-demonstration",
+    "title": "Week 8: When Pregnancy Meets Poverty",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Equal Credit Opportunity Act and its failure to prevent reverse redlining targeting minority neighborhoods for predatory lending; reproductive rights and data privacy; state and federal Medicaid coverage rules for prenatal care and their variation by state.\nHealth Focus: Preterm birth (&lt; 37 weeks gestation) as a leading cause of infant mortality and lifelong disability; racial disparities in preterm birth that persist even when controlling for socioeconomic status; economic stressors (housing instability, foreclosure, eviction) as physiological stressors affecting birth outcomes.\nData: Washington Tracking Network (WTN) — preterm birth data by county and by race/ethnicity, available at fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81. Select 'Reproductive and Birth Outcomes' &gt; 'Preterm Birth.' Download county-level CSV. Also: CDC Social Vulnerability Index (atsdr.cdc.gov/placeandhealth/svi) for Washington state; HOLC redlining shapefiles for Seattle/Tacoma (dsl.richmond.edu/panorama/redlining).\nR Code: read_csv() to load WTN preterm birth county data; tigris::counties() to get Washington state county shapefiles; dplyr::left_join() by county FIPS; ggplot2 geom_sf() choropleth of preterm birth rates; facet_wrap(~race_ethnicity) to produce small multiples by racial group; cowplot::plot_grid() to combine faceted maps.\n\nDownload Washington state county-level preterm birth data by race/ethnicity from the Washington Tracking Network (fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81) — select Reproductive and Birth Outcomes &gt; Preterm Birth\nLoad county shapefile for Washington state using tigris::counties(state='WA', cb=TRUE)\nJoin preterm birth data to shapefile by county FIPS code; compute preterm birth rate per 1,000 births\nProduce a faceted choropleth map with one panel per racial/ethnic group (White, Black, Hispanic, AIAN) showing preterm birth rates by county\nOverlay WA county HOLC redlining boundaries (Seattle, Tacoma, Spokane) to examine whether high-preterm-birth counties correspond to historically redlined areas",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Week 8: When Pregnancy Meets Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week09.html",
+    "href": "labs/week09.html",
+    "title": "Week 9: Children Are Not Collateral Damage",
+    "section": "",
+    "text": "Theme: Child Health: Lead, ACEs, School Environments, and Cumulative\nHarm\nAdverse childhood experiences — abuse, neglect, household dysfunction, and exposure to community violence — are among the strongest known predictors of adult physical and mental health. They are also distributed by ZIP code. New research by Barboza-Salerno et al. (2026) advances an environmental justice framework that moves beyond individual-level social disadvantage to examine how neighborhood conditions predict child maltreatment risk.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Week 9: Children Are Not Collateral Damage</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week09.html#classroom-lab-demonstration",
+    "href": "labs/week09.html#classroom-lab-demonstration",
+    "title": "Week 9: Children Are Not Collateral Damage",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Child welfare law and mandatory reporting obligations under CAPTA (Child Abuse Prevention and Treatment Act); NEPA and children's environmental health protections; Individuals with Disabilities Education Act (IDEA) and school safety mandates; Title IV-E foster care funding and its relationship to neighborhood poverty.\nHealth Focus: ACEs (adverse childhood experiences) as cumulative risk factors for adult cardiovascular disease, cancer, substance use disorder, and early death; the dose-response relationship between ACE score and adult health outcomes; environmental toxin exposure (lead, air pollution) as an additional ACE-like stressor.\nData: K-12 School Shooting Database (SSDB, k12ssdb.org); NCES school location shapefiles (nces.ed.gov/programs/edge/geographic/schoollocations); CDC Social Vulnerability Index 2020; EPA EJScreen (ejscreen.epa.gov); Area Deprivation Index from Neighborhood Atlas (neighborhoodatlas.medicine.wisc.edu); county-level ACE prevalence from CDC BRFSS.\nR Code: Load school shooting CSV from k12ssdb.org; join to NCES school shapefile by NCESSCH school ID; sf::st_buffer() at 500m around schools; sf::st_join() to identify schools within industrial buffers from Week 7; scale() to standardize ADI, SVI, and EJScreen components; rowMeans() to compute composite vulnerability index.\n\nImport K-12 School Shooting Database (k12ssdb.org) and NCES school location shapefiles into QGIS\nCreate spatial overlay: identify schools within 500m of industrial sites using buffers from Week 7 lab\nJoin with ADI, SVI, and county-level ACE prevalence data in R; construct a composite child vulnerability index by census tract using standardized z-scores\nMap composite index by census tract; identify top 10 highest-burden tracts in Franklin County\nApply Barboza-Salerno et al. (2026) EJ framework: add EJScreen particulate matter and proximity-to-hazardous-sites variables; test whether adding EJ indicators changes which tracts rank highest",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Week 9: Children Are Not Collateral Damage</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week10.html",
+    "href": "labs/week10.html",
+    "title": "Week 10: Guns, Greenery, and the Geography of",
+    "section": "",
+    "text": "Theme: Gun Violence Prevention: Fatal and Nonfatal Injury Patterns,\nTree Equity, and Policy\nGun violence is not random. It clusters in corridors shaped by disinvestment, concentrated poverty, lack of greenspace, and the same historical redlining patterns examined in Week 2. This week we use Chicago's publicly available fatal and nonfatal shooting dataset — one of the most detailed open-source urban violence databases in the country — to map violence patterns, examine environmental predictors including tree equity, and connect the spatial analysis to Public Nuisance Law and environmental accountability frameworks.\nAssignment 3 Check-In: Assignment 3 is due tonight. Your 2-page policy brief should: (1) open with a data-grounded problem statement naming your specific community; (2) present exactly 3-5 findings with cited statistics or maps from your own analysis; (3) name a specific decision-maker as the addressee; (4) propose one concrete, feasible recommendation; and (5) acknowledge one data limitation. Graduate students: your legal analysis page should cite the specific statute or ordinance most relevant to your recommendation.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Week 10: Guns, Greenery, and the Geography of</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week10.html#classroom-lab-demonstration",
+    "href": "labs/week10.html#classroom-lab-demonstration",
+    "title": "Week 10: Guns, Greenery, and the Geography of",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Public Nuisance Law and holding property owners legally responsible for environmental conditions that facilitate violence; Justice40 Initiative mandating equitable distribution of federal environmental investment; Second Amendment jurisprudence and the limits of gun violence research funding under the Dickey Amendment.\nHealth Focus: Fatal and nonfatal firearm injuries as a public health epidemic; the distinction between homicides and nonfatal shootings in surveillance (nonfatal data is systematically undercounted); the environmental health argument that urban tree canopy deficits create heat islands that are associated with increased violence.\nData: Chicago Violence Reduction — Victims of Homicides and Non-Fatal Shootings dataset (City of Chicago Data Portal: data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data — direct download as CSV, updated regularly, free); Tree Equity Score (American Forests, treeequityscore.org); Chicago community area boundaries (City of Chicago Data Portal); HOLC shapefiles for Chicago (dsl.richmond.edu/panorama/redlining).\nR Code: read_csv() for Chicago violence data; lubridate::mdy() to parse dates; dplyr::group_by(community_area) + summarise(n()) to aggregate by area; sf::st_as_sf(coords=c('longitude','latitude'), crs=4326) to convert point data; sf::st_join() for spatial join to community area polygons; ggplot2 geom_sf() choropleth; geom_point() for dot density map of individual incidents.\n\nDownload Chicago Violence Reduction — Victims of Homicides and Non-Fatal Shootings data from the City of Chicago Data Portal (data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data); load in R\nConvert latitude/longitude columns to sf spatial object using st_as_sf(); set CRS to EPSG:4326; transform to Illinois State Plane projection (EPSG:26971) for accurate area calculations\nAggregate shooting incidents to Chicago community area using sf::st_join() and dplyr::count(); compute incident rate per 10,000 population using 2020 Census population data\nProduce a choropleth map of shooting incident rates by community area; overlay HOLC grade boundaries to examine the redlining-violence relationship\nLoad Tree Equity Score data for Chicago (treeequityscore.org); join to community areas; produce a bivariate map of violence rate vs. tree equity score using biscale",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Week 10: Guns, Greenery, and the Geography of</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week11.html",
+    "href": "labs/week11.html",
+    "title": "Week 11: Deaths of Despair",
+    "section": "",
+    "text": "Theme: The Opioid Crisis: Structural Causes, Settlement Law, and\nTreatment Deserts\nThe opioid epidemic's geography tracks disinvestment, unemployment, and despair with remarkable precision. Ohio has been one of the hardest-hit states — and a leader in legal settlements requiring data-justified resource allocation. This week we map treatment 'deserts' and build an interactive R-Shiny dashboard for stakeholder engagement.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Week 11: Deaths of Despair</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week11.html#classroom-lab-demonstration",
+    "href": "labs/week11.html#classroom-lab-demonstration",
+    "title": "Week 11: Deaths of Despair",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Opioid settlement law and fiduciary responsibility; the legal requirement for states to spend settlement funds on 'abatement' (direct harm reduction) rather than general government purposes; how epidemiological data and spatial analysis are used to satisfy legal burden-of-proof standards in settlement fund allocation decisions.\nHealth Focus: Geographic access to medication for opioid use disorder (MOUD — buprenorphine, methadone, naltrexone) as a social determinant of overdose mortality; treatment 'deserts' defined as areas with overdose rates above the county median AND drive-time to nearest MOUD provider exceeding 30 minutes.\nData: NVDRS (National Violent Death Reporting System) overdose mortality data — restricted use; Ohio overdose mortality data provided on Carmen from Ohio Department of Health (odh.ohio.gov); SAMHSA Treatment Locator MOUD provider data (findtreatment.gov/api — pre-downloaded CSV on Carmen); CDC SVI 2020.\nR Code: osrm::osrmIsochrone() to compute drive-time isochrones around each MOUD provider (30-minute radius); sf::st_join() to identify census tracts within 30-minute drive of a provider; dplyr::case_when() to classify tracts as treatment deserts; shiny::fluidPage(), shiny::sliderInput(), renderPlot() for interactive Shiny app.\n\nLoad Ohio overdose mortality data (provided on Carmen) and SAMHSA MOUD provider locations\nCalculate 30-minute drive-time isochrones around each MOUD provider using osrm::osrmIsochrone()\nIdentify census tracts with overdose rates above county median AND outside all 30-min provider isochrones — these are treatment deserts\nBuild a basic R-Shiny app displaying the treatment desert map with a slider for drive-time threshold (15, 30, 45, 60 minutes) and SVI overlay toggle",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Week 11: Deaths of Despair</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week12.html",
+    "href": "labs/week12.html",
+    "title": "Week 12: The Hidden Epidemic",
+    "section": "",
+    "text": "Theme: Intimate Partner Violence: Surveillance, Narratives, and Legal\nEvidence\nIntimate partner violence is systematically underreported in structured data. Emergency department codes, police records, and death certificates each capture only a fraction of the true burden. This week we return to NLP — applied to IPV case narratives — to extract injury mechanisms invisible in ICD codes and examine how narrative-based data is used in legal proceedings.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Week 12: The Hidden Epidemic</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week12.html#classroom-lab-demonstration",
+    "href": "labs/week12.html#classroom-lab-demonstration",
+    "title": "Week 12: The Hidden Epidemic",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Burden of proof in civil IPV litigation; how pattern evidence from narrative-based data extraction can establish systematic harm; Violence Against Women Act (VAWA) data collection and reporting requirements; mandatory reporting laws for IPV in healthcare settings and their limitations.\nHealth Focus: The surveillance gap between structured ICD-coded IPV data and actual IPV burden; sex-based differences in injury mechanism patterns (blunt object trauma, strangulation, weapon use); IPV as a driver of preterm birth, mental health disorders, and substance use — connecting to Week 8 maternal health findings.\nData: De-identified IPV ED narrative dataset (Carmen, IRB-approved subset from NEISS with IPV-coded incidents); NISVS 2023/2024 Data Brief (cdc.gov/nisvs); HOLC shapefiles for Columbus; CDC SVI 2020.\nR Code: stringr::str_detect() with regex patterns for IPV mechanism extraction; tidytext::unnest_tokens() for tokenization; dplyr::case_when() to classify Object / Action / Location; sf::st_as_sf() to map geocoded incidents; ggplot2 geom_sf() choropleth; chisq.test() to test whether mechanism severity differs by HOLC grade.\n\nLoad de-identified IPV ED narrative dataset (Carmen, IRB-approved subset)\nDevelop and apply keyword-and-regex coding schema for Object / Action / Location injury mechanisms\nAggregate mechanism frequencies by census tract; map using sf + ggplot2 choropleth overlaid on SVI\nOverlay IPV cluster map with HOLC grade boundaries; run chi-square test for association between mechanism severity and HOLC grade",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Week 12: The Hidden Epidemic</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week13.html",
+    "href": "labs/week13.html",
+    "title": "Week 13: Counting the Uncountable",
+    "section": "",
+    "text": "Theme: Suicide, Self-Harm, and the Data Behind Prevention\nSuicide is the second leading cause of death among people aged 10-34 in the United States, yet it is among the most undercounted causes of death in surveillance systems. This week we examine how surveillance systems capture suicide and self-harm data, what they miss, and how data-driven approaches can inform prevention policy. Note: This week's content addresses suicide and self-harm. OSU mental health resources: CCS at ccs.osu.edu or 614-292-5766. Crisis line: dial 988.\nAssignment 4 Check-In: Assignment 4 is due tonight. Your 10-minute recorded video should: (1) open by naming the specific community audience you are addressing; (2) show at least 3 visualizations or maps from your course labs, each narrated in plain language; (3) explain what the data shows and why it matters to that community; and (4) close with one concrete action the community can take or demand. Submit the video link (unlisted YouTube, Zoom recording, or file upload) AND your slide deck via Carmen.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Week 13: Counting the Uncountable</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week13.html#classroom-lab-demonstration",
+    "href": "labs/week13.html#classroom-lab-demonstration",
+    "title": "Week 13: Counting the Uncountable",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Safe messaging guidelines (AFSP, SAMHSA) as professional ethical and legal standards for public health practitioners; mandatory reporting laws for suicide risk (varies by state); Mental Health Parity and Addiction Equity Act and its enforcement gaps; 988 Suicide and Crisis Lifeline as a legally mandated service.\nHealth Focus: Age-standardized suicide mortality rates by county, sex, and race/ethnicity; the rural-urban gradient in suicide rates; the intersection of opioid use disorder and suicide risk — revisiting the opioid treatment desert analysis from Week 11 through a mental health lens.\nData: CDC WISQARS (Web-based Injury Statistics Query and Reporting System — wisqars.cdc.gov) for county-level suicide mortality rates by age, sex, and race; NVDRS narrative excerpts (provided on Carmen, IRB-approved subset); Ohio ADI and SVI data from previous weeks; MOUD access isochrones from Week 11.\nR Code: Manually download WISQARS county-level data as CSV from wisqars.cdc.gov; join to county shapefile using FIPS; compute age-standardized rates using direct standardization with standard population weights; ggplot2 choropleth; compare spatial pattern to opioid treatment deserts using sf::st_join().\n\nAccess CDC WISQARS (wisqars.cdc.gov); download Ohio county-level suicide mortality data by age group, sex, and race/ethnicity as CSV\nLoad NVDRS narrative excerpts (Carmen IRB subset); apply tidytext to extract the most common circumstances preceding suicide death by race/ethnicity\nMap county-level age-standardized suicide rates using ggplot2 + sf; overlay ADI and SVI data\nSpatial overlay with Week 11 MOUD treatment desert map: identify counties with both high suicide rates and poor MOUD access — a dual crisis geography",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Week 13: Counting the Uncountable</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week14.html",
+    "href": "labs/week14.html",
+    "title": "Week 14: Speaking Truth to Power",
+    "section": "",
+    "text": "Theme: Policy Briefs, Stakeholder Presentations, and Legal Advocacy\nData that never leaves the research file cabinet changes nothing. This week we shift from analysis to advocacy. We screen and discuss selected Assignment 4 community data story presentations as case studies in science communication. Peer evaluation of Assignment 4 is due this week. We begin curating and polishing the Final Portfolio.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Speaking Truth to Power</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week14.html#classroom-lab-demonstration",
+    "href": "labs/week14.html#classroom-lab-demonstration",
+    "title": "Week 14: Speaking Truth to Power",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Legislative lobbying disclosure rules for 501(c)(3) organizations (IRS 501(h) election); the distinction between lobbying (restricted) and advocacy (permissible for nonprofits); community benefits agreements as legally binding contracts between developers and community organizations.\nHealth Focus: Science communication as a public health practice; translating epidemiological findings into language that compels action; the WHO storytelling framework for health impact; how assignment 4 presentations can be evaluated for effectiveness with non-expert audiences.\nData: Synthesis of all course datasets; GitHub repository structure for reproducible reporting; peer evaluation rubric for Assignment 4 (provided on Carmen).\nR Code: Final polish on any Shiny app elements; GitHub CLI or RStudio Git pane for repository commits; R Markdown framing notes for curated lab submissions; rmarkdown::render() to batch-knit multiple lab files.\n\nScreen and discuss 3-4 selected Assignment 4 presentations as class case studies; complete peer evaluation rubric\nWorkshop: translating a regression coefficient table into 3-bullet executive insights for a city council memo\nGitHub lab: set up Final Portfolio repository structure (README.md, data/, analysis/, policy-memo/, reflection/)\nBegin drafting the new 3-page synthesis policy memo for the Final Portfolio",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Week 14: Speaking Truth to Power</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week15.html",
+    "href": "labs/week15.html",
+    "title": "Week 15: The Evidence-to-Power Pipeline",
+    "section": "",
+    "text": "Theme: Ethics, Community Ownership, and the Future of Public Health\nData Science\nWho benefits when community data is published? Who controls it? Community Benefits Agreements, data sovereignty frameworks, and Indigenous data rights raise fundamental questions about the ethics of research-for-policy. We also reflect on the semester's arc and discuss where the field is heading: federated learning, synthetic data, and the risks and opportunities of large language models in population health surveillance.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: The Evidence-to-Power Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week15.html#classroom-lab-demonstration",
+    "href": "labs/week15.html#classroom-lab-demonstration",
+    "title": "Week 15: The Evidence-to-Power Pipeline",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: Community Benefits Agreements as legally binding contracts between municipalities/developers and community organizations; data sovereignty frameworks and Indigenous data rights (CARE Principles); IRB ethics and community-engaged research standards; FERPA, HIPAA, and the limits of de-identification.\nHealth Focus: The evidence-to-power gap: why rigorous data often fails to change policy; community-engaged research as an alternative model; the future of public health data science — federated learning, synthetic data generation, and large language models as population health surveillance tools.\nData: Synthesis and curation of the semester's lab work; GitHub repository as a professional portfolio artifact; peer portfolio audit checklist (provided on Carmen).\nR Code: rmarkdown::render() with clean environment to test reproducibility; usethis::use_readme_md() and usethis::use_github() for portfolio finalization; git commit and push from RStudio Git pane; final review of all code annotations and inline comments.\n\nConduct structured peer audit of a classmate's GitHub portfolio using provided checklist rubric\nFinalize GitHub repository structure: README.md, data/, analysis/ (3 curated labs), policy-memo/, reflection/\nPolish all R Markdown reports — ensure code is annotated, outputs are labeled, and each document knits cleanly from a fresh session\nWrite 400-word self-reflection: What did data show that policy missed?",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Week 15: The Evidence-to-Power Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week16.html",
+    "href": "labs/week16.html",
+    "title": "Week 16: Finals Week",
+    "section": "",
+    "text": "Theme: Final Portfolio Submission\nNo in-person class meetings during finals week. The Strategic Translation Portfolio is submitted via GitHub (link posted to Carmen) by Friday April 30 at 11:59 PM. The instructor will hold virtual office hours Monday April 28 and Tuesday April 29 for final questions.\nAssignment Final Check-In: Final Portfolio is due tonight at 11:59 PM. Your GitHub repository must contain: (1) 3 curated lab .Rmd files and their knitted HTML outputs, each with a 150-word framing note in the README; (2) a new 3-page policy memo in the policy-memo/ folder; (3) a 400-word self-reflection in the reflection/ folder; (4) a completed README.md. Graduate students: your literature synthesis must be in the repository. Submit your GitHub link — not the files themselves — via the Carmen assignment portal.",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Week 16: Finals Week</span>"
+    ]
+  },
+  {
+    "objectID": "labs/week16.html#classroom-lab-demonstration",
+    "href": "labs/week16.html#classroom-lab-demonstration",
+    "title": "Week 16: Finals Week",
+    "section": "Classroom Lab Demonstration",
+    "text": "Classroom Lab Demonstration\nLegal Focus: No new legal content this week. Review: which of the 4 assignments engaged most directly with a specific legal doctrine? Write a sentence in your reflection connecting your data work to a specific law, statute, or regulation.\nHealth Focus: No new health content this week. Ensure your final policy memo identifies the specific health outcome your evidence addresses, names the affected population, and cites the geographic scope of the problem.\nData: Final GitHub repository review: all datasets should be documented in the README with source URLs; no raw data files over 50MB should be committed to GitHub (use .gitignore or link to external source instead).\nR Code: Final reproducibility check: restart R, clear environment, run each lab file start to finish. All packages should load without errors. If a package is not on CRAN, include installation instructions in the README.\n\nFinal review of GitHub repository for completeness and reproducibility\nConfirm all three curated labs knit without errors in a completely fresh R session\nFinal polish on new 3-page synthesis policy memo and 400-word self-reflection\nSubmit GitHub repository link via Carmen by Friday April 30 at 11:59 PM",
+    "crumbs": [
+      "Weekly R Labs",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Week 16: Finals Week</span>"
     ]
   }
 ]
