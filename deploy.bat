@@ -1,5 +1,5 @@
 @echo off
-echo 🚀 Starting deployment of Quarto course website...
+echo Starting deployment of Quarto course website...
 
 :: 1. Add all changes to git
 git add .
@@ -15,5 +15,5 @@ git push
 echo Rendering and publishing HTML to GitHub Pages...
 quarto publish gh-pages --no-prompt
 
-echo ✅ Deployment complete! Your website should update in a few minutes.
+echo Deployment complete! Your website should update in a few minutes.
 pause
