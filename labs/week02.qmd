@@ -1,0 +1,57 @@
+---
+title: "Week 2: Redlining, Race, and the Geography of Illness"
+---
+
+## Theme: Historical Policy Echoes: How the Past Becomes the Present
+
+The 1930s Home Owners\' Loan Corporation did not just deny mortgages ---
+it engineered the geography of life expectancy. This week we trace the
+legal history of state-sponsored residential segregation and its direct,
+measurable effects on contemporary health outcomes. We introduce the
+Opportunity Atlas, begin working with HOLC shapefiles and spatial joins,
+and introduce HMDA mortgage data as a tool for documenting present-day
+lending discrimination. This week\'s lab is the technical foundation for
+Assignment 1, due next Friday.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Fair Housing Act of 1968; HOLC (Home Owners\' Loan
+Corporation) as state-sponsored residential segregation; Home Mortgage
+Disclosure Act (HMDA, 1975) as a legal transparency and accountability
+tool requiring lenders to report application outcomes by race.
+
+**Health Focus:** How 1930s government lending grades produced
+neighborhood-level health disparities in life expectancy, preterm birth,
+cardiovascular disease, and firearm injury that persist today.
+
+**Data:** University of Richmond Mapping Inequality HOLC shapefiles
+(dsl.richmond.edu/panorama/redlining); Opportunity Atlas tract-level
+outcome data (opportunityinsights.org/data); ACS life expectancy
+estimates via tidycensus; HMDA Ohio mortgage application data (Consumer
+Financial Protection Bureau, ffiec.cfpb.gov/hmda).
+
+**R Code:** sf::st_read() for shapefiles; tidycensus::get_acs() for ACS
+data; sf::st_join() for spatial joins by GEOID; ggplot2 choropleth maps
+with geom_sf() and scale_fill_viridis_c(); dplyr summarise() to compute
+group means by HOLC grade.
+
+- Load University of Richmond HOLC shapefiles for Columbus using
+  sf::st_read()
+
+- Load ACS life expectancy data at census tract level via
+  tidycensus::get_acs()
+
+- Perform spatial join: match HOLC grade polygons to modern census
+  tracts by GEOID using sf::st_join()
+
+- Calculate mean life expectancy per HOLC grade; produce a bar chart and
+  choropleth map in ggplot2
+
+- Preview Opportunity Atlas data: load CSV, filter to Ohio (state FIPS =
+  39), explore variables kfr_black_female_p25, kfr_white_female_p25 ---
+  full analysis due as Assignment 1 next Friday
+
+- Load Ohio HMDA data subset from Carmen; compute loan denial rates by
+  applicant race; map at census tract level; overlay with HOLC
+  boundaries
+

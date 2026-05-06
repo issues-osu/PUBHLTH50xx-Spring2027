@@ -1,0 +1,75 @@
+---
+title: "Week 10: Guns, Greenery, and the Geography of"
+---
+
+## Theme: Gun Violence Prevention: Fatal and Nonfatal Injury Patterns,
+Tree Equity, and Policy
+
+Gun violence is not random. It clusters in corridors shaped by
+disinvestment, concentrated poverty, lack of greenspace, and the same
+historical redlining patterns examined in Week 2. This week we use
+Chicago\'s publicly available fatal and nonfatal shooting dataset ---
+one of the most detailed open-source urban violence databases in the
+country --- to map violence patterns, examine environmental predictors
+including tree equity, and connect the spatial analysis to Public
+Nuisance Law and environmental accountability frameworks.
+
+**Assignment 3 Check-In:** Assignment 3 is due tonight. Your 2-page
+policy brief should: (1) open with a data-grounded problem statement
+naming your specific community; (2) present exactly 3-5 findings with
+cited statistics or maps from your own analysis; (3) name a specific
+decision-maker as the addressee; (4) propose one concrete, feasible
+recommendation; and (5) acknowledge one data limitation. Graduate
+students: your legal analysis page should cite the specific statute or
+ordinance most relevant to your recommendation.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Public Nuisance Law and holding property owners legally
+responsible for environmental conditions that facilitate violence;
+Justice40 Initiative mandating equitable distribution of federal
+environmental investment; Second Amendment jurisprudence and the limits
+of gun violence research funding under the Dickey Amendment.
+
+**Health Focus:** Fatal and nonfatal firearm injuries as a public health
+epidemic; the distinction between homicides and nonfatal shootings in
+surveillance (nonfatal data is systematically undercounted); the
+environmental health argument that urban tree canopy deficits create
+heat islands that are associated with increased violence.
+
+**Data:** Chicago Violence Reduction --- Victims of Homicides and
+Non-Fatal Shootings dataset (City of Chicago Data Portal:
+data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data
+--- direct download as CSV, updated regularly, free); Tree Equity Score
+(American Forests, treeequityscore.org); Chicago community area
+boundaries (City of Chicago Data Portal); HOLC shapefiles for Chicago
+(dsl.richmond.edu/panorama/redlining).
+
+**R Code:** read_csv() for Chicago violence data; lubridate::mdy() to
+parse dates; dplyr::group_by(community_area) + summarise(n()) to
+aggregate by area; sf::st_as_sf(coords=c(\'longitude\',\'latitude\'),
+crs=4326) to convert point data; sf::st_join() for spatial join to
+community area polygons; ggplot2 geom_sf() choropleth; geom_point() for
+dot density map of individual incidents.
+
+- Download Chicago Violence Reduction --- Victims of Homicides and
+  Non-Fatal Shootings data from the City of Chicago Data Portal
+  (data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data);
+  load in R
+
+- Convert latitude/longitude columns to sf spatial object using
+  st_as_sf(); set CRS to EPSG:4326; transform to Illinois State Plane
+  projection (EPSG:26971) for accurate area calculations
+
+- Aggregate shooting incidents to Chicago community area using
+  sf::st_join() and dplyr::count(); compute incident rate per 10,000
+  population using 2020 Census population data
+
+- Produce a choropleth map of shooting incident rates by community area;
+  overlay HOLC grade boundaries to examine the redlining-violence
+  relationship
+
+- Load Tree Equity Score data for Chicago (treeequityscore.org); join to
+  community areas; produce a bivariate map of violence rate vs. tree
+  equity score using biscale
+

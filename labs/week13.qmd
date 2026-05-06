@@ -1,0 +1,64 @@
+---
+title: "Week 13: Counting the Uncountable"
+---
+
+## Theme: Suicide, Self-Harm, and the Data Behind Prevention
+
+Suicide is the second leading cause of death among people aged 10-34 in
+the United States, yet it is among the most undercounted causes of death
+in surveillance systems. This week we examine how surveillance systems
+capture suicide and self-harm data, what they miss, and how data-driven
+approaches can inform prevention policy. Note: This week\'s content
+addresses suicide and self-harm. OSU mental health resources: CCS at
+ccs.osu.edu or 614-292-5766. Crisis line: dial 988.
+
+**Assignment 4 Check-In:** Assignment 4 is due tonight. Your 10-minute
+recorded video should: (1) open by naming the specific community
+audience you are addressing; (2) show at least 3 visualizations or maps
+from your course labs, each narrated in plain language; (3) explain what
+the data shows and why it matters to that community; and (4) close with
+one concrete action the community can take or demand. Submit the video
+link (unlisted YouTube, Zoom recording, or file upload) AND your slide
+deck via Carmen.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Safe messaging guidelines (AFSP, SAMHSA) as
+professional ethical and legal standards for public health
+practitioners; mandatory reporting laws for suicide risk (varies by
+state); Mental Health Parity and Addiction Equity Act and its
+enforcement gaps; 988 Suicide and Crisis Lifeline as a legally mandated
+service.
+
+**Health Focus:** Age-standardized suicide mortality rates by county,
+sex, and race/ethnicity; the rural-urban gradient in suicide rates; the
+intersection of opioid use disorder and suicide risk --- revisiting the
+opioid treatment desert analysis from Week 11 through a mental health
+lens.
+
+**Data:** CDC WISQARS (Web-based Injury Statistics Query and Reporting
+System --- wisqars.cdc.gov) for county-level suicide mortality rates by
+age, sex, and race; NVDRS narrative excerpts (provided on Carmen,
+IRB-approved subset); Ohio ADI and SVI data from previous weeks; MOUD
+access isochrones from Week 11.
+
+**R Code:** Manually download WISQARS county-level data as CSV from
+wisqars.cdc.gov; join to county shapefile using FIPS; compute
+age-standardized rates using direct standardization with standard
+population weights; ggplot2 choropleth; compare spatial pattern to
+opioid treatment deserts using sf::st_join().
+
+- Access CDC WISQARS (wisqars.cdc.gov); download Ohio county-level
+  suicide mortality data by age group, sex, and race/ethnicity as CSV
+
+- Load NVDRS narrative excerpts (Carmen IRB subset); apply tidytext to
+  extract the most common circumstances preceding suicide death by
+  race/ethnicity
+
+- Map county-level age-standardized suicide rates using ggplot2 + sf;
+  overlay ADI and SVI data
+
+- Spatial overlay with Week 11 MOUD treatment desert map: identify
+  counties with both high suicide rates and poor MOUD access --- a dual
+  crisis geography
+

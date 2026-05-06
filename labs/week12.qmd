@@ -1,0 +1,50 @@
+---
+title: "Week 12: The Hidden Epidemic"
+---
+
+## Theme: Intimate Partner Violence: Surveillance, Narratives, and Legal
+Evidence
+
+Intimate partner violence is systematically underreported in structured
+data. Emergency department codes, police records, and death certificates
+each capture only a fraction of the true burden. This week we return to
+NLP --- applied to IPV case narratives --- to extract injury mechanisms
+invisible in ICD codes and examine how narrative-based data is used in
+legal proceedings.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Burden of proof in civil IPV litigation; how pattern
+evidence from narrative-based data extraction can establish systematic
+harm; Violence Against Women Act (VAWA) data collection and reporting
+requirements; mandatory reporting laws for IPV in healthcare settings
+and their limitations.
+
+**Health Focus:** The surveillance gap between structured ICD-coded IPV
+data and actual IPV burden; sex-based differences in injury mechanism
+patterns (blunt object trauma, strangulation, weapon use); IPV as a
+driver of preterm birth, mental health disorders, and substance use ---
+connecting to Week 8 maternal health findings.
+
+**Data:** De-identified IPV ED narrative dataset (Carmen, IRB-approved
+subset from NEISS with IPV-coded incidents); NISVS 2023/2024 Data Brief
+(cdc.gov/nisvs); HOLC shapefiles for Columbus; CDC SVI 2020.
+
+**R Code:** stringr::str_detect() with regex patterns for IPV mechanism
+extraction; tidytext::unnest_tokens() for tokenization;
+dplyr::case_when() to classify Object / Action / Location;
+sf::st_as_sf() to map geocoded incidents; ggplot2 geom_sf() choropleth;
+chisq.test() to test whether mechanism severity differs by HOLC grade.
+
+- Load de-identified IPV ED narrative dataset (Carmen, IRB-approved
+  subset)
+
+- Develop and apply keyword-and-regex coding schema for Object / Action
+  / Location injury mechanisms
+
+- Aggregate mechanism frequencies by census tract; map using sf +
+  ggplot2 choropleth overlaid on SVI
+
+- Overlay IPV cluster map with HOLC grade boundaries; run chi-square
+  test for association between mechanism severity and HOLC grade
+

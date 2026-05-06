@@ -1,0 +1,47 @@
+---
+title: "Week 14: Speaking Truth to Power"
+---
+
+## Theme: Policy Briefs, Stakeholder Presentations, and Legal Advocacy
+
+Data that never leaves the research file cabinet changes nothing. This
+week we shift from analysis to advocacy. We screen and discuss selected
+Assignment 4 community data story presentations as case studies in
+science communication. Peer evaluation of Assignment 4 is due this week.
+We begin curating and polishing the Final Portfolio.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Legislative lobbying disclosure rules for 501(c)(3)
+organizations (IRS 501(h) election); the distinction between lobbying
+(restricted) and advocacy (permissible for nonprofits); community
+benefits agreements as legally binding contracts between developers and
+community organizations.
+
+**Health Focus:** Science communication as a public health practice;
+translating epidemiological findings into language that compels action;
+the WHO storytelling framework for health impact; how assignment 4
+presentations can be evaluated for effectiveness with non-expert
+audiences.
+
+**Data:** Synthesis of all course datasets; GitHub repository structure
+for reproducible reporting; peer evaluation rubric for Assignment 4
+(provided on Carmen).
+
+**R Code:** Final polish on any Shiny app elements; GitHub CLI or
+RStudio Git pane for repository commits; R Markdown framing notes for
+curated lab submissions; rmarkdown::render() to batch-knit multiple lab
+files.
+
+- Screen and discuss 3-4 selected Assignment 4 presentations as class
+  case studies; complete peer evaluation rubric
+
+- Workshop: translating a regression coefficient table into 3-bullet
+  executive insights for a city council memo
+
+- GitHub lab: set up Final Portfolio repository structure (README.md,
+  data/, analysis/, policy-memo/, reflection/)
+
+- Begin drafting the new 3-page synthesis policy memo for the Final
+  Portfolio
+

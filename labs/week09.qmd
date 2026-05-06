@@ -1,0 +1,60 @@
+---
+title: "Week 9: Children Are Not Collateral Damage"
+---
+
+## Theme: Child Health: Lead, ACEs, School Environments, and Cumulative
+Harm
+
+Adverse childhood experiences --- abuse, neglect, household dysfunction,
+and exposure to community violence --- are among the strongest known
+predictors of adult physical and mental health. They are also
+distributed by ZIP code. New research by Barboza-Salerno et al. (2026)
+advances an environmental justice framework that moves beyond
+individual-level social disadvantage to examine how neighborhood
+conditions predict child maltreatment risk.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Child welfare law and mandatory reporting obligations
+under CAPTA (Child Abuse Prevention and Treatment Act); NEPA and
+children\'s environmental health protections; Individuals with
+Disabilities Education Act (IDEA) and school safety mandates; Title IV-E
+foster care funding and its relationship to neighborhood poverty.
+
+**Health Focus:** ACEs (adverse childhood experiences) as cumulative
+risk factors for adult cardiovascular disease, cancer, substance use
+disorder, and early death; the dose-response relationship between ACE
+score and adult health outcomes; environmental toxin exposure (lead, air
+pollution) as an additional ACE-like stressor.
+
+**Data:** K-12 School Shooting Database (SSDB, k12ssdb.org); NCES school
+location shapefiles
+(nces.ed.gov/programs/edge/geographic/schoollocations); CDC Social
+Vulnerability Index 2020; EPA EJScreen (ejscreen.epa.gov); Area
+Deprivation Index from Neighborhood Atlas
+(neighborhoodatlas.medicine.wisc.edu); county-level ACE prevalence from
+CDC BRFSS.
+
+**R Code:** Load school shooting CSV from k12ssdb.org; join to NCES
+school shapefile by NCESSCH school ID; sf::st_buffer() at 500m around
+schools; sf::st_join() to identify schools within industrial buffers
+from Week 7; scale() to standardize ADI, SVI, and EJScreen components;
+rowMeans() to compute composite vulnerability index.
+
+- Import K-12 School Shooting Database (k12ssdb.org) and NCES school
+  location shapefiles into QGIS
+
+- Create spatial overlay: identify schools within 500m of industrial
+  sites using buffers from Week 7 lab
+
+- Join with ADI, SVI, and county-level ACE prevalence data in R;
+  construct a composite child vulnerability index by census tract using
+  standardized z-scores
+
+- Map composite index by census tract; identify top 10 highest-burden
+  tracts in Franklin County
+
+- Apply Barboza-Salerno et al. (2026) EJ framework: add EJScreen
+  particulate matter and proximity-to-hazardous-sites variables; test
+  whether adding EJ indicators changes which tracts rank highest
+

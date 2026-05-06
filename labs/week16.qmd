@@ -1,0 +1,53 @@
+---
+title: "Week 16: Finals Week"
+---
+
+## Theme: Final Portfolio Submission
+
+No in-person class meetings during finals week. The Strategic
+Translation Portfolio is submitted via GitHub (link posted to Carmen) by
+Friday April 30 at 11:59 PM. The instructor will hold virtual office
+hours Monday April 28 and Tuesday April 29 for final questions.
+
+**Assignment Final Check-In:** Final Portfolio is due tonight at 11:59
+PM. Your GitHub repository must contain: (1) 3 curated lab .Rmd files
+and their knitted HTML outputs, each with a 150-word framing note in the
+README; (2) a new 3-page policy memo in the policy-memo/ folder; (3) a
+400-word self-reflection in the reflection/ folder; (4) a completed
+README.md. Graduate students: your literature synthesis must be in the
+repository. Submit your GitHub link --- not the files themselves --- via
+the Carmen assignment portal.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** No new legal content this week. Review: which of the 4
+assignments engaged most directly with a specific legal doctrine? Write
+a sentence in your reflection connecting your data work to a specific
+law, statute, or regulation.
+
+**Health Focus:** No new health content this week. Ensure your final
+policy memo identifies the specific health outcome your evidence
+addresses, names the affected population, and cites the geographic scope
+of the problem.
+
+**Data:** Final GitHub repository review: all datasets should be
+documented in the README with source URLs; no raw data files over 50MB
+should be committed to GitHub (use .gitignore or link to external source
+instead).
+
+**R Code:** Final reproducibility check: restart R, clear environment,
+run each lab file start to finish. All packages should load without
+errors. If a package is not on CRAN, include installation instructions
+in the README.
+
+- Final review of GitHub repository for completeness and reproducibility
+
+- Confirm all three curated labs knit without errors in a completely
+  fresh R session
+
+- Final polish on new 3-page synthesis policy memo and 400-word
+  self-reflection
+
+- Submit GitHub repository link via Carmen by Friday April 30 at 11:59
+  PM
+

@@ -1,0 +1,55 @@
+---
+title: "Week 4: Social Cohesion and Health"
+---
+
+## Theme: Collective Efficacy, Trust, and Community Health
+
+Robert Sampson\'s landmark Chicago research established that collective
+efficacy --- a neighborhood\'s shared willingness to intervene for the
+common good --- is one of the strongest predictors of health and safety
+outcomes, independent of poverty. This week we map social vulnerability
+alongside CDC PLACES health outcome data, focusing on variables that
+capture social isolation and lack of emotional support --- dimensions of
+health that are often invisible in administrative data. We build
+bivariate maps that visually communicate the relationship between
+neighborhood social conditions and population health.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Home Rule and local governance authority; Fair Housing
+Act and exclusionary zoning; legal frameworks for community health
+investment; ARPA (American Rescue Plan Act) and community health block
+grant allocation criteria.
+
+**Health Focus:** CDC PLACES health outcome data, specifically the
+\'Lack of Social and Emotional Support\' measure (CASTHMA model) and
+\'Mental Health Not Good\' variable --- two outcomes that track closely
+with neighborhood collective efficacy and social isolation.
+
+**Data:** CDC Social Vulnerability Index (SVI), 2020, available at
+atsdr.cdc.gov/placeandhealth/svi; CDC PLACES Local Data for Better
+Health (tract-level), available at cdc.gov/places --- specifically
+variables CASTHMA (current asthma), MHLTH (mental health), SOCIAL (lack
+of social and emotional support), and CSMOKING.
+
+**R Code:** Read SVI and PLACES CSV files; merge by GEOID using
+dplyr::left_join(); biscale package for bivariate choropleth
+(biscale::bi_class(), bi_legend()); ggplot2 geom_sf() with two-variable
+color encoding; cowplot::plot_grid() to combine map and legend.
+
+- Load CDC SVI 2020 data and CDC PLACES tract-level data for Ohio, both
+  available as CSV download from CDC websites
+
+- Merge SVI and PLACES by census tract GEOID using dplyr::left_join()
+
+- Produce Bivariate Map 1: SVI overall score (x-axis) vs. PLACES \'Lack
+  of Social and Emotional Support\' (SOCIAL variable, y-axis) using
+  biscale package; identify tracts in the High-High quadrant
+
+- Produce Bivariate Map 2: SVI overall score (x-axis) vs. PLACES
+  \'Mental Health Not Good\' (MHLTH variable, y-axis); compare
+  geographic pattern to Map 1
+
+- Discuss: which tracts appear as high-burden on both maps? What does
+  the spatial pattern suggest about where collective efficacy is lowest?
+

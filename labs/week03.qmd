@@ -1,0 +1,44 @@
+---
+title: "Week 3: Mapping What We See and What We Fear"
+---
+
+## Theme: The Built Environment: Street-Level Data and Perceived Safety
+
+Does a neighborhood feel safe? And does that feeling match reality?
+Street-level imagery and computer vision tools allow us to quantify the
+perceived environment --- but also raise profound questions about
+surveillance, privacy, and whose fear gets measured. This week we map
+the built environment using OpenStreetMap and introduce heat map
+visualization of perception data.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Privacy law and the Fourth Amendment in public space;
+legal implications of using street-level imagery for government public
+health surveillance; informed consent and passive data collection.
+
+**Health Focus:** How the physical characteristics of neighborhood
+environments (lighting, vacancy, greenspace) shape perceived safety and
+mental health through environmental stress pathways.
+
+**Data:** OpenStreetMap via the osmdata R package (openstreetmap.org);
+SafeGraph foot traffic data (safegraph.com --- provided via Carmen for
+academic use); vacancy rate data from ACS via tidycensus.
+
+**R Code:** osmdata::opq() and osmdata::add_osm_feature() to query OSM;
+sf::st_as_sf() to convert to spatial object; ggplot2 geom_sf() for dot
+maps and heat maps; biscale package for bivariate choropleth mapping of
+two variables simultaneously.
+
+- Query OpenStreetMap for Columbus street network and building
+  footprints using osmdata R package
+
+- Load ACS vacancy rate data at census tract level via tidycensus;
+  compute vacancy quartiles
+
+- Produce a bivariate choropleth map of streetlight density vs. vacancy
+  rates using the biscale package in R
+
+- Identify 3 spatial outliers where perceived safety (perception score)
+  diverges from infrastructure data (vacancy, lighting)
+

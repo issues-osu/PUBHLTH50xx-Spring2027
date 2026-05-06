@@ -12,10 +12,26 @@ book:
     - objectives.qmd
     - assignments.qmd
     - schedule.qmd
-    - rcode.qmd
     - datasets.qmd
     - policies.qmd
-
+    - part: "Weekly R Labs"
+      chapters:
+        - labs/week01.qmd
+        - labs/week02.qmd
+        - labs/week03.qmd
+        - labs/week04.qmd
+        - labs/week05.qmd
+        - labs/week06.qmd
+        - labs/week07.qmd
+        - labs/week08.qmd
+        - labs/week09.qmd
+        - labs/week10.qmd
+        - labs/week11.qmd
+        - labs/week12.qmd
+        - labs/week13.qmd
+        - labs/week14.qmd
+        - labs/week15.qmd
+        - labs/week16.qmd
 format:
   html:
     theme: cosmo

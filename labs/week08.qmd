@@ -1,0 +1,63 @@
+---
+title: "Week 8: When Pregnancy Meets Poverty"
+---
+
+## Theme: Maternal Health: Structural Racism, Geographic Disparities, and
+Birth Outcomes
+
+The United States spends more on health care than any comparable nation
+and has the worst maternal mortality rate among high-income countries.
+Black women are more than three times as likely as white women to
+experience a pregnancy-related death --- a disparity that persists after
+controlling for income, education, and comorbidities. This week we use
+the Washington Tracking Network\'s publicly available preterm birth data
+to build spatial maps of birth outcome disparities, examining how
+geography intersects with race and economic stress to shape the
+conditions of birth.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Equal Credit Opportunity Act and its failure to prevent
+reverse redlining targeting minority neighborhoods for predatory
+lending; reproductive rights and data privacy; state and federal
+Medicaid coverage rules for prenatal care and their variation by state.
+
+**Health Focus:** Preterm birth (\< 37 weeks gestation) as a leading
+cause of infant mortality and lifelong disability; racial disparities in
+preterm birth that persist even when controlling for socioeconomic
+status; economic stressors (housing instability, foreclosure, eviction)
+as physiological stressors affecting birth outcomes.
+
+**Data:** Washington Tracking Network (WTN) --- preterm birth data by
+county and by race/ethnicity, available at
+fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81. Select \'Reproductive
+and Birth Outcomes\' \> \'Preterm Birth.\' Download county-level CSV.
+Also: CDC Social Vulnerability Index (atsdr.cdc.gov/placeandhealth/svi)
+for Washington state; HOLC redlining shapefiles for Seattle/Tacoma
+(dsl.richmond.edu/panorama/redlining).
+
+**R Code:** read_csv() to load WTN preterm birth county data;
+tigris::counties() to get Washington state county shapefiles;
+dplyr::left_join() by county FIPS; ggplot2 geom_sf() choropleth of
+preterm birth rates; facet_wrap(\~race_ethnicity) to produce small
+multiples by racial group; cowplot::plot_grid() to combine faceted maps.
+
+- Download Washington state county-level preterm birth data by
+  race/ethnicity from the Washington Tracking Network
+  (fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81) --- select
+  Reproductive and Birth Outcomes \> Preterm Birth
+
+- Load county shapefile for Washington state using
+  tigris::counties(state=\'WA\', cb=TRUE)
+
+- Join preterm birth data to shapefile by county FIPS code; compute
+  preterm birth rate per 1,000 births
+
+- Produce a faceted choropleth map with one panel per racial/ethnic
+  group (White, Black, Hispanic, AIAN) showing preterm birth rates by
+  county
+
+- Overlay WA county HOLC redlining boundaries (Seattle, Tacoma, Spokane)
+  to examine whether high-preterm-birth counties correspond to
+  historically redlined areas
+

@@ -1,0 +1,60 @@
+---
+title: "Week 6: The Stories Clinical Data Won't Tell You"
+---
+
+## Theme: NLP and Injury Surveillance: Reading the Invisible
+
+Structured data --- ICD codes, admission diagnoses --- systematically
+misses the context of injury. A woman admitted for \'facial trauma\' may
+be a survivor of intimate partner violence; a child coded for
+\'accidental fall\' may have been pushed. This week we use natural
+language processing to extract hidden injury mechanisms from ED
+narratives and introduce the CourtListener API for scraping and
+analyzing public health caselaw.
+
+**Assignment 2 Check-In:** Assignment 2 is due Friday Feb 27 --- one
+week from now. By this point you should have: (1) chosen your community
+health topic (gun violence, maternal health, opioid overdose, IPV, or
+ACEs); (2) identified at least two datasets from the course data catalog
+that you will use; and (3) decided on a geographic area (Franklin
+County, another Ohio county, or a city). If you have not done these
+three things, use this weekend to finalize your choices and begin
+downloading your data.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Burden of proof and narrative evidence in civil
+litigation; how text-based data extraction is used to establish patterns
+of systematic harm; the Free Law Project and public access to federal
+court decisions via CourtListener (courtlistener.com).
+
+**Health Focus:** The gap between structured ICD-coded injury data and
+the actual mechanisms of harm recorded in clinical narratives; intimate
+partner violence as a systematically undercoded diagnosis; natural
+language processing as an injury surveillance tool.
+
+**Data:** NEISS (National Electronic Injury Surveillance System)
+narrative data subset (provided on Carmen, from
+cpsc.gov/Research\--Statistics/NEISS-Injury-Data); CourtListener federal
+court decision API (courtlistener.com/help/api); CDC NVDRS narrative
+excerpts (Carmen, IRB-approved subset).
+
+**R Code:** tidytext::unnest_tokens() for tokenization;
+tidytext::bind_tf_idf() for TF-IDF analysis; stringr::str_detect() and
+regex patterns for mechanism extraction; httr::GET() and
+jsonlite::fromJSON() for CourtListener API calls; ggplot2 for frequency
+bar charts and timeline plots.
+
+- Load NEISS narrative data subset from Carmen; use tidytext to tokenize
+  narratives and compute TF-IDF by injury type and sex
+
+- Extract mechanism categories (Object, Action, Location) using regex
+  and keyword dictionaries provided on Carmen
+
+- CourtListener lab: make httr::GET() API calls to search for federal
+  IPV + housing cases; download case metadata (court, date, docket
+  number); produce a timeline of caselaw by federal circuit
+
+- Optional: pass 20 anonymized ED narratives to an LLM API for mechanism
+  classification; compare output to regex results
+

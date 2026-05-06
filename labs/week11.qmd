@@ -1,0 +1,52 @@
+---
+title: "Week 11: Deaths of Despair"
+---
+
+## Theme: The Opioid Crisis: Structural Causes, Settlement Law, and
+Treatment Deserts
+
+The opioid epidemic\'s geography tracks disinvestment, unemployment, and
+despair with remarkable precision. Ohio has been one of the hardest-hit
+states --- and a leader in legal settlements requiring data-justified
+resource allocation. This week we map treatment \'deserts\' and build an
+interactive R-Shiny dashboard for stakeholder engagement.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Opioid settlement law and fiduciary responsibility; the
+legal requirement for states to spend settlement funds on \'abatement\'
+(direct harm reduction) rather than general government purposes; how
+epidemiological data and spatial analysis are used to satisfy legal
+burden-of-proof standards in settlement fund allocation decisions.
+
+**Health Focus:** Geographic access to medication for opioid use
+disorder (MOUD --- buprenorphine, methadone, naltrexone) as a social
+determinant of overdose mortality; treatment \'deserts\' defined as
+areas with overdose rates above the county median AND drive-time to
+nearest MOUD provider exceeding 30 minutes.
+
+**Data:** NVDRS (National Violent Death Reporting System) overdose
+mortality data --- restricted use; Ohio overdose mortality data provided
+on Carmen from Ohio Department of Health (odh.ohio.gov); SAMHSA
+Treatment Locator MOUD provider data (findtreatment.gov/api ---
+pre-downloaded CSV on Carmen); CDC SVI 2020.
+
+**R Code:** osrm::osrmIsochrone() to compute drive-time isochrones
+around each MOUD provider (30-minute radius); sf::st_join() to identify
+census tracts within 30-minute drive of a provider; dplyr::case_when()
+to classify tracts as treatment deserts; shiny::fluidPage(),
+shiny::sliderInput(), renderPlot() for interactive Shiny app.
+
+- Load Ohio overdose mortality data (provided on Carmen) and SAMHSA MOUD
+  provider locations
+
+- Calculate 30-minute drive-time isochrones around each MOUD provider
+  using osrm::osrmIsochrone()
+
+- Identify census tracts with overdose rates above county median AND
+  outside all 30-min provider isochrones --- these are treatment deserts
+
+- Build a basic R-Shiny app displaying the treatment desert map with a
+  slider for drive-time threshold (15, 30, 45, 60 minutes) and SVI
+  overlay toggle
+

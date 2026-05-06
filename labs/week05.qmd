@@ -1,0 +1,57 @@
+---
+title: "Week 5: Who Does the Algorithm Think You Are?"
+---
+
+## Theme: Algorithmic Accountability, Bias, and Political Geography
+
+Predictive risk models now influence who gets flagged for child welfare
+investigation, who is triaged first in an emergency department, and who
+qualifies for housing assistance. Crucially, these algorithms are built
+on data that is itself shaped by political decisions --- including
+redistricting, which determines who votes in which district and thus
+which communities get political representation and public investment.
+This week we examine algorithmic bias in public health AND explore how
+redistricting data can reveal political geographies of health inequity.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Due process and algorithmic decision-making in
+government; disparate impact doctrine under Title VI and the Civil
+Rights Act; the Voting Rights Act and redistricting as a legal framework
+for political representation; prison gerrymandering.
+
+**Health Focus:** How political geography (district boundaries) shapes
+public health investment; whether communities with high health burden
+are systematically gerrymandered out of political representation; the
+connection between algorithmic bias in public health systems and
+structural racism.
+
+**Data:** Redistricting Data Hub, Ohio state page
+(redistrictingdatahub.org/data/ohio): 2020 Census Block PL 94-171 data;
+2023 ACS Poverty and Race data at the census tract level; 2024 General
+Election Precinct-Level Results; Approved 2025 Congressional Districts.
+All free downloads after free account registration.
+
+**R Code:** Download shapefiles from Redistricting Data Hub; load with
+sf::st_read(); join ACS poverty and race data by GEOID; map
+congressional district boundaries overlaid on health outcome data
+(PLACES) or SVI; compute summary statistics of health burden by
+congressional district.
+
+- Download the 2025 Approved Ohio Congressional District boundaries
+  shapefile from Redistricting Data Hub
+  (redistrictingdatahub.org/data/ohio)
+
+- Download the 2023 ACS Census Tract Race Data and Poverty Data for Ohio
+  from Redistricting Data Hub
+
+- Load both datasets in R using sf::st_read() and read_csv(); join by
+  GEOID
+
+- Perform a spatial join to assign each census tract to its
+  congressional district using sf::st_join()
+
+- Compute mean poverty rate and racial composition by congressional
+  district; produce a bar chart comparing district-level poverty rates;
+  identify which districts represent the highest-burden communities
+

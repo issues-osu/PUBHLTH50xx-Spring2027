@@ -1,0 +1,64 @@
+---
+title: "Week 7: Where You Live Is Your Health"
+---
+
+## Theme: Legal, Physical & Social Determinants: Environmental Justice
+and Zoning
+
+Industrial zoning is not random. Historically, hazardous facilities were
+sited near communities with the least political power. This week we use
+EPA EJScreen data, buffer analysis, and spatial joins to identify
+residential clusters at highest risk of lead exposure. We examine the
+legal doctrine of \'police power\' and two landmark health policy
+studies: the Oregon Medicaid experiment and the Clean Air Act\'s
+long-term consequences for children\'s earnings.
+
+**Assignment 2 Check-In:** Assignment 2 is due tonight (Friday Feb 27).
+Your submission should include: (1) a choropleth map of your chosen
+health topic by census tract or county; (2) a spatial cluster analysis
+or buffer/join identifying where burden concentrates; (3) at least one
+social determinant overlay layer; (4) a 500-word policy implications
+section. If your R Markdown document is not knitting correctly, bring
+your error message to office hours or post to Carmen by 5 PM today.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Police power doctrine and its use to justify zoning
+regulations; NEPA (National Environmental Policy Act) environmental
+impact assessment requirements; Clean Air Act enforcement history;
+Justice40 Initiative requiring 40% of federal environmental investment
+to flow to disadvantaged communities.
+
+**Health Focus:** Cumulative environmental burden --- the compounding of
+multiple environmental hazards (air pollution, proximity to industrial
+sites, lack of greenspace) in the same neighborhoods --- and its
+relationship to lead exposure, asthma, and childhood developmental
+outcomes.
+
+**Data:** EPA EJScreen Environmental Justice Mapping Tool
+(ejscreen.epa.gov --- download data or use API); Franklin County
+municipal zoning shapefile (provided on Carmen from county GIS portal);
+CDC Social Vulnerability Index 2020 (atsdr.cdc.gov/placeandhealth/svi);
+HMDA Ohio mortgage data (ffiec.cfpb.gov/hmda).
+
+**R Code:** QGIS: Buffer tool (Vector \> Geoprocessing Tools \> Buffer)
+at 500m around industrial parcels; Vector \> Data Management \> Join
+attributes by location. R: sf::st_buffer(); sf::st_join();
+dplyr::summarise() to count residential parcels and population within
+buffers; ggplot2 choropleth of compound vulnerability scores.
+
+- Import EPA EJScreen data for Franklin County into QGIS; map cumulative
+  environmental burden index by census tract
+
+- Import municipal zoning shapefile; create 500m buffers around all
+  industrial-zoned parcels using QGIS Buffer tool
+
+- Perform spatial join to identify residential parcels and school
+  locations within high-risk industrial buffers
+
+- Join with CDC SVI in R to calculate compound vulnerability scores for
+  exposed populations; produce choropleth map
+
+- Load Ohio HMDA subset; compute loan denial rates by race and census
+  tract; map overlaid with EJScreen burden index
+

@@ -1,0 +1,49 @@
+---
+title: "Week 15: The Evidence-to-Power Pipeline"
+---
+
+## Theme: Ethics, Community Ownership, and the Future of Public Health
+Data Science
+
+Who benefits when community data is published? Who controls it?
+Community Benefits Agreements, data sovereignty frameworks, and
+Indigenous data rights raise fundamental questions about the ethics of
+research-for-policy. We also reflect on the semester\'s arc and discuss
+where the field is heading: federated learning, synthetic data, and the
+risks and opportunities of large language models in population health
+surveillance.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Community Benefits Agreements as legally binding
+contracts between municipalities/developers and community organizations;
+data sovereignty frameworks and Indigenous data rights (CARE
+Principles); IRB ethics and community-engaged research standards; FERPA,
+HIPAA, and the limits of de-identification.
+
+**Health Focus:** The evidence-to-power gap: why rigorous data often
+fails to change policy; community-engaged research as an alternative
+model; the future of public health data science --- federated learning,
+synthetic data generation, and large language models as population
+health surveillance tools.
+
+**Data:** Synthesis and curation of the semester\'s lab work; GitHub
+repository as a professional portfolio artifact; peer portfolio audit
+checklist (provided on Carmen).
+
+**R Code:** rmarkdown::render() with clean environment to test
+reproducibility; usethis::use_readme_md() and usethis::use_github() for
+portfolio finalization; git commit and push from RStudio Git pane; final
+review of all code annotations and inline comments.
+
+- Conduct structured peer audit of a classmate\'s GitHub portfolio using
+  provided checklist rubric
+
+- Finalize GitHub repository structure: README.md, data/, analysis/ (3
+  curated labs), policy-memo/, reflection/
+
+- Polish all R Markdown reports --- ensure code is annotated, outputs
+  are labeled, and each document knits cleanly from a fresh session
+
+- Write 400-word self-reflection: What did data show that policy missed?
+

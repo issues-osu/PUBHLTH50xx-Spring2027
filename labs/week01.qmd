@@ -1,0 +1,52 @@
+---
+title: "Week 1: Why Data Is Never Neutral"
+---
+
+## Theme: The Social Construction of Public Health Evidence
+
+Every dataset reflects choices about what to count, who counts, and who
+decides. This week we examine how framing shapes public health evidence
+and how administrative law and agency power turn \'data\' into
+\'crisis.\' We introduce R Markdown for reproducible reporting and
+explore publicly available health data resources. We also examine the
+Google Flu Trends episode as a cautionary tale about how big data can
+mislead as well as illuminate. Note: Monday January 18 is Martin Luther
+King Jr. Day --- no classes. Week 2 begins Tuesday January 19.
+
+## Classroom Lab Demonstration
+
+**Legal Focus:** Administrative law and the power of health agencies
+(CDC, FDA) to define \'crisis\' through mandatory data reporting
+standards; the Paperwork Reduction Act and federal data collection
+authority.
+
+**Health Focus:** How surveillance data shapes resource allocation and
+public health response; limitations of administrative data in capturing
+structural drivers of health.
+
+**Data:** CDC BRFSS (Behavioral Risk Factor Surveillance System,
+cdc.gov/brfss); CDC NHIS (National Health Interview Survey,
+cdc.gov/nchs/nhis); CDC ILINet influenza surveillance data
+(gis.cdc.gov/grasp/fluview).
+
+**R Code:** R Markdown setup and YAML headers; loading CSV data with
+readr; exploring codebooks; computing frequency tables with dplyr
+(group_by, summarise, count); basic ggplot2 bar charts; knitting to
+HTML.
+
+- Initialize GitHub repository; create a new .Rmd file with YAML header
+  (title, author, date, output: html_document)
+
+- Load the provided BRFSS subset from Carmen using read_csv(); examine
+  variable names and class with glimpse() and head()
+
+- Compute the prevalence of 3 health outcomes by state using group_by()
+  and summarise(); display as a sorted bar chart in ggplot2
+
+- Load CDC ILINet weekly flu surveillance CSV (provided on Carmen); plot
+  a time series of influenza-like illness (ILI) rates by week using
+  ggplot2 geom_line(); compare pre- and post-2009 pandemic patterns
+
+- Knit the completed document to HTML; review the output and discuss:
+  what does the ILINet data measure, and what does it miss?
+
