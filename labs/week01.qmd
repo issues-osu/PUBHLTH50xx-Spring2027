@@ -1,5 +1,5 @@
 ---
-title: "Week 1: Why Data Is Never Neutral"
+title: "Week 1: Data as Social Construct"
 ---
 
 ## Theme: The Social Construction of Public Health Evidence
