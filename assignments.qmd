@@ -1,0 +1,56 @@
+# Assignments & Grading
+
+## Grade Breakdown
+
+| Component | Weight | Due Date |
+|-----------|--------|----------|
+| Self-Graded Weekly Lab Assignments (15 weeks) | 15% | Sundays 11:59 PM each week |
+| Assignment 1 — Opportunity Atlas Data Visualization | 15% | Week 3 — Friday, Jan 30 |
+| Assignment 2 — Spatial Analysis Report | 15% | Week 7 — Friday, Feb 27 |
+| Assignment 3 — Evidence-Based Policy Brief | 20% | Week 10 — Friday, Mar 26 |
+| Assignment 4 — Community Data Story (10-min recorded) | 15% | Week 13 — Friday, Apr 16 |
+| Final Portfolio — Strategic Translation Portfolio | 15% | Finals Week — Friday, Apr 30 |
+| Participation and Discussion | 5% | Ongoing |
+
+## Assignment Details
+
+### Self-Graded Weekly Lab Assignments (15%)
+Each week, a self-teaching R Markdown (`.Rmd`) document is posted on Carmen. You will write code, run it, and knit the document to HTML to submit. The document walks you through the week's analysis with pre-written code scaffolding, `check_answer()` functions, and a short reflection prompt. Each lab is graded as complete (1 point) or incomplete (0 points).
+
+### Assignment 1 — Opportunity Atlas Data Visualization (15%)
+**Due: Friday, January 30**  
+Produce a polished two-panel choropleth map in R using the Opportunity Atlas dataset and HOLC shapefiles. Show predicted household income at age 35 for children from low-income families, disaggregated by race, overlaid on 1930s HOLC grades. Accompany with a summary boxplot and a 400-word interpretive memo. *Graduate students additionally compare two cities.*
+
+### Assignment 2 — Spatial Analysis Report (15%)
+**Due: Friday, February 27**  
+Select ONE community health topic and use at least two publicly available spatial datasets. Produce a 3-4 page spatial analysis report in R Markdown that maps the geographic distribution, identifies spatial clusters using Local Moran's I or buffer analysis, and overlays a social determinant layer. Include a 500-word policy implications section. *Graduate students fit and interpret a spatial regression model.*
+
+### Assignment 3 — Evidence-Based Policy Brief (20%)
+**Due: Friday, March 26**  
+Write a 2-page policy brief addressed to a specific, named decision-maker. Must include a problem statement, 3-5 key findings with cited statistics/maps, one concrete policy recommendation, and one limitation of the evidence. *Graduate students include an additional 1-page legal analysis.*
+
+### Assignment 4 — Community Data Story (15%)
+**Due: Friday, April 16**  
+Record a 10-minute video presentation telling a data story for a community audience. Include at least 3 visualizations or maps produced during the course, narrated in plain language. Propose one concrete action the community could take. Peer evaluation contributes 25% of this grade. *Graduate students additionally submit a 1-page ethical reflection.*  
+**Accessibility Requirement:** To comply with OSU's Minimum Digital Accessibility Standards (MDAS), all video submissions must include synchronized closed captions or a complete text transcript.
+
+### Final Portfolio — Strategic Translation Portfolio (15%)
+**Due: Friday, April 30**  
+Submitted as a GitHub repository with a `README.md`. Contains: 3 curated and polished lab outputs from the semester (with annotated code and 150-word framing notes), 1 new 3-page policy memo synthesizing findings, and 1 reflective statement (400 words) on the 'evidence to power' pipeline. *Graduate students additionally include a 2-page literature synthesis.*
+
+## Grading Scale
+
+| Grade | Range | Description |
+|-------|-------|-------------|
+| A | 94-100 | Outstanding work that reflects mastery |
+| A- | 90-<94 | Excellent work that reflects mastery |
+| B+ | 87-<90 | Good work that reflects mastery of most material |
+| B | 83-<87 | Good work that reflects mastery of some material |
+| B- | 80-<83 | Good work that reflects mastery of a few aspects |
+| C+ | 77-<80 | Mediocre work that reflects familiarity |
+| C | 73-<77 | Mediocre work |
+| C- | 70-<73 | Mediocre work with little familiarity |
+| D+ / D | 60-<70 | |
+| E | Below 60 | |
+
+*Graduate students (6000-level section) must achieve a minimum grade of B- to satisfy graduate program requirements.*

@@ -1,0 +1,35 @@
+# R Code Resources
+
+This page will house all R code templates, functions, and scaffolding used in the weekly lab sessions.
+
+## Weekly Lab Templates
+
+Below are the foundational scripts for our spatial and NLP analyses.
+
+- **Week 1:** Introduction to Tidyverse (`.qmd`)
+- **Week 2:** Spatial Joins with `sf` (`.qmd`)
+- **Week 5:** Bivariate Mapping with `biscale` (`.qmd`)
+- **Week 6:** NLP and regex with `tidytext` (`.qmd`)
+
+## Helper Functions
+
+During the course, we will use a custom `check_answer()` function to validate lab output. You can find the source code below:
+
+```r
+# Custom validation function
+check_answer <- function(student_val, expected_val, tolerance = 0.01) {
+  if (is.numeric(student_val) && is.numeric(expected_val)) {
+    if (abs(student_val - expected_val) <= tolerance) {
+      message("Correct!")
+    } else {
+      warning("Incorrect. Try checking your group_by or summarise logic.")
+    }
+  } else {
+    if (identical(student_val, expected_val)) {
+      message("Correct!")
+    } else {
+      warning("Incorrect. Check your spelling or formatting.")
+    }
+  }
+}
+```

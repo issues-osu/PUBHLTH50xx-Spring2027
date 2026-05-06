@@ -1,0 +1,738 @@
+# Course Schedule
+
+*Readings marked * are available as open-access PDFs via Carmen. Schedule is subject to adjustment; changes will be announced via Carmen.*
+
+
+## SECTION 1: Foundations — Data, Inequity, and the Social Construction of Public Health (Weeks 1-6)
+
+---
+
+
+### Week 1 | Jan 11-15 | Why Data Is Never Neutral
+
+**Theme: The Social Construction of Public Health Evidence**
+
+Every dataset reflects choices about what to count, who counts, and who decides. This week we examine how framing shapes public health evidence and how administrative law and agency power turn 'data' into 'crisis.' We introduce R Markdown for reproducible reporting and explore publicly available health data resources. We also examine the Google Flu Trends episode as a cautionary tale about how big data can mislead as well as illuminate. Note: Monday January 18 is Martin Luther King Jr. Day — no classes. Week 2 begins Tuesday January 19.
+
+**Required Readings**
+
+Mooney, S. J., & Pejaver, V. (2018). Big data in public health: terminology, machine learning, and privacy. Annual Review of Public Health, 39, 95-112.*
+
+Wiley, L. F., & Gostin, L. O. (2025). Public Health Law and Ethics: Power, Duty, Restraint. UC Press. [Chapter 1: The Legal Foundations of Public Health].
+
+Barboza-Salerno, G., et al. (2026). Sex-based differences in injury patterns and hospitalization from emergency department narratives of intimate partner violence, United States, 2013-2024. American Journal of Emergency Medicine, 103, 181-189.*
+
+CDC (2024). Racial Disparities in Maternal and Infant Health: Current Status and Key Issues. KFF Report.* [skim for data literacy discussion]
+
+Ginsberg, J., et al. (2009). Detecting influenza epidemics using search engine query data. Nature, 457, 1012-1014.*
+
+OPTIONAL: Lazer, D., et al. (2014). The parable of Google Flu: traps in big data analysis. Science, 343(6167), 1203-1205.*
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Administrative law and the power of health agencies (CDC, FDA) to define 'crisis' through mandatory data reporting standards; the Paperwork Reduction Act and federal data collection authority.
+- **Health Focus:**  How surveillance data shapes resource allocation and public health response; limitations of administrative data in capturing structural drivers of health.
+- **Data:**  CDC BRFSS (Behavioral Risk Factor Surveillance System, cdc.gov/brfss); CDC NHIS (National Health Interview Survey, cdc.gov/nchs/nhis); CDC ILINet influenza surveillance data (gis.cdc.gov/grasp/fluview).
+- **R Code:**  R Markdown setup and YAML headers; loading CSV data with readr; exploring codebooks; computing frequency tables with dplyr (group_by, summarise, count); basic ggplot2 bar charts; knitting to HTML.
+Initialize GitHub repository; create a new .Rmd file with YAML header (title, author, date, output: html_document)
+
+Load the provided BRFSS subset from Carmen using read_csv(); examine variable names and class with glimpse() and head()
+
+Compute the prevalence of 3 health outcomes by state using group_by() and summarise(); display as a sorted bar chart in ggplot2
+
+Load CDC ILINet weekly flu surveillance CSV (provided on Carmen); plot a time series of influenza-like illness (ILI) rates by week using ggplot2 geom_line(); compare pre- and post-2009 pandemic patterns
+
+Knit the completed document to HTML; review the output and discuss: what does the ILINet data measure, and what does it miss?
+
+**Self-Graded Lab: Lab 1 — What Does This Dataset Actually Measure?**
+
+- **Legal Focus:**  Identify the federal statute or agency rule that requires BRFSS data collection. In one sentence, explain what legal authority compels states to participate.
+- **Health Focus:**  Choose one BRFSS health outcome variable from the provided dataset. Map its prevalence across states using ggplot2; describe the geographic pattern in 2 sentences.
+- **Data:**  Load the CDC ILINet weekly flu data from Carmen. Compute the mean and standard deviation of ILI rates for the 2017-18 season vs. the 2009-10 pandemic season.
+- **R Code:**  Use dplyr's filter(), group_by(), and summarise() to compute season-level summary statistics; produce a side-by-side boxplot comparing the two seasons.
+- **check_answer() prompt:**  Which season had higher mean ILI rates? Was the 2009-10 pandemic season the most severe on record in the ILINet data?
+- **Reflection (100 words):**  Describe one limitation of BRFSS or ILINet data that could affect a public health decision. What type of structural driver of health would this dataset systematically miss?
+
+### Week 2 | Jan 19-23 | Redlining, Race, and the Geography of Illness
+
+**Theme: Historical Policy Echoes: How the Past Becomes the Present**
+
+The 1930s Home Owners' Loan Corporation did not just deny mortgages — it engineered the geography of life expectancy. This week we trace the legal history of state-sponsored residential segregation and its direct, measurable effects on contemporary health outcomes. We introduce the Opportunity Atlas, begin working with HOLC shapefiles and spatial joins, and introduce HMDA mortgage data as a tool for documenting present-day lending discrimination. This week's lab is the technical foundation for Assignment 1, due next Friday.
+
+**Required Readings**
+
+Rothstein, R. (2017). The Color of Law. [Chapters 1-3: State-Sponsored Segregation, pp. 1-66].
+
+Krieger, N., et al. (2020). Structural racism, historical redlining, and risk of preterm birth in New York City, 2013-2017. American Journal of Public Health, 110(7), 1046-1053.*
+
+Barboza-Salerno, G., Liebhard, B., Duhaney, S., & Harrington, T. (2025). Redlining, reinvestment, and racial segregation: a Bayesian spatial analysis of mortgage lending trajectories and firearm-related violence. Injury Epidemiology, 12(1), 23.*
+
+Chetty, R., et al. (2018). The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility. American Economic Review, 116(1), 1-51. [Free non-technical summary: opportunityinsights.org/paper/the-opportunity-atlas]*
+
+Opportunity Insights (2018). Neighborhoods and Opportunity: Executive Summary. equality-of-opportunity.org/assets/documents/nbhds_exec_summary.pdf*
+
+Opportunity Insights (2015). Moving to Opportunity: Executive Summary. equality-of-opportunity.org/assets/documents/mto_exec_summary.pdf*
+
+Aisch, G., et al. (2015). The best and worst places to grow up: how your area compares. The New York Times, May 3.* [Interactive: nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html]
+
+Aisch, G., et al. (2017). Some colleges have more students from the top 1 percent than the bottom 60. Find yours. The New York Times.*
+
+Porter, E. (2015). Education gap between rich and poor is growing wider. The New York Times.*
+
+SEARCH: 'Williams & Collins (2001) Racial residential segregation: a fundamental cause of racial disparities in health. Public Health Reports' -- Google Scholar
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Fair Housing Act of 1968; HOLC (Home Owners' Loan Corporation) as state-sponsored residential segregation; Home Mortgage Disclosure Act (HMDA, 1975) as a legal transparency and accountability tool requiring lenders to report application outcomes by race.
+- **Health Focus:**  How 1930s government lending grades produced neighborhood-level health disparities in life expectancy, preterm birth, cardiovascular disease, and firearm injury that persist today.
+- **Data:**  University of Richmond Mapping Inequality HOLC shapefiles (dsl.richmond.edu/panorama/redlining); Opportunity Atlas tract-level outcome data (opportunityinsights.org/data); ACS life expectancy estimates via tidycensus; HMDA Ohio mortgage application data (Consumer Financial Protection Bureau, ffiec.cfpb.gov/hmda).
+- **R Code:**  sf::st_read() for shapefiles; tidycensus::get_acs() for ACS data; sf::st_join() for spatial joins by GEOID; ggplot2 choropleth maps with geom_sf() and scale_fill_viridis_c(); dplyr summarise() to compute group means by HOLC grade.
+Load University of Richmond HOLC shapefiles for Columbus using sf::st_read()
+
+Load ACS life expectancy data at census tract level via tidycensus::get_acs()
+
+Perform spatial join: match HOLC grade polygons to modern census tracts by GEOID using sf::st_join()
+
+Calculate mean life expectancy per HOLC grade; produce a bar chart and choropleth map in ggplot2
+
+Preview Opportunity Atlas data: load CSV, filter to Ohio (state FIPS = 39), explore variables kfr_black_female_p25, kfr_white_female_p25 — full analysis due as Assignment 1 next Friday
+
+Load Ohio HMDA data subset from Carmen; compute loan denial rates by applicant race; map at census tract level; overlay with HOLC boundaries
+
+**Self-Graded Lab: Lab 2 — Redlining's Long Shadow: Mapping Life Expectancy by HOLC Grade**
+
+- **Legal Focus:**  In 2-3 sentences, explain what the Home Mortgage Disclosure Act (HMDA) requires lenders to report and why this matters as a civil rights enforcement tool.
+- **Health Focus:**  Using the provided HOLC + ACS dataset, produce a bar chart of mean life expectancy by HOLC grade (A, B, C, D). Which grade has the lowest life expectancy?
+- **Data:**  Load the provided Ohio HMDA subset. Compute the loan denial rate (denied / total applications) by applicant race and census tract. Which racial group has the highest denial rate?
+- **R Code:**  Produce a choropleth map of census tracts colored by life expectancy, with HOLC grade boundaries overlaid as outlines using geom_sf(fill=NA, color='black', linewidth=0.3).
+- **check_answer() prompt:**  What is the difference in mean life expectancy between HOLC Grade A and Grade D tracts? Is this difference statistically significant (run a t-test using t.test())?
+- **Reflection (100 words):**  Reflecting on this week's lab, explain how a spatial join works conceptually — what are you matching to what, and why does the GEOID matter? What did the HOLC-to-life-expectancy map reveal that a table of numbers alone would not?
+ASSIGNMENT 1 due Friday Jan 30 by 11:59 PM (see Assignments section)
+
+
+### Week 3 | Jan 26-30 | Mapping What We See and What We Fear
+
+**Theme: The Built Environment: Street-Level Data and Perceived Safety**
+
+Does a neighborhood feel safe? And does that feeling match reality? Street-level imagery and computer vision tools allow us to quantify the perceived environment — but also raise profound questions about surveillance, privacy, and whose fear gets measured. This week we map the built environment using OpenStreetMap and introduce heat map visualization of perception data.
+
+**Required Readings**
+
+Mooney, S. J., et al. (2016). Imagery of place and neighborhood: a new tool in public health surveillance. Epidemiology, 27(4), 476.*
+
+SEARCH: 'Salesses, Schechtner & Hidalgo (2013) The collaborative image of the city: mapping the inequality of urban perception. PLoS ONE' -- Google Scholar
+
+SEARCH: 'Glaeser et al. (2018) Big data and big cities: the promises and limitations of improved measures of urban life. Economic Inquiry' -- Google Scholar
+
+ZenSVI Documentation: Technical overview of street view imagery analysis in urban public health.* [Carmen]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Privacy law and the Fourth Amendment in public space; legal implications of using street-level imagery for government public health surveillance; informed consent and passive data collection.
+- **Health Focus:**  How the physical characteristics of neighborhood environments (lighting, vacancy, greenspace) shape perceived safety and mental health through environmental stress pathways.
+- **Data:**  OpenStreetMap via the osmdata R package (openstreetmap.org); SafeGraph foot traffic data (safegraph.com — provided via Carmen for academic use); vacancy rate data from ACS via tidycensus.
+- **R Code:**  osmdata::opq() and osmdata::add_osm_feature() to query OSM; sf::st_as_sf() to convert to spatial object; ggplot2 geom_sf() for dot maps and heat maps; biscale package for bivariate choropleth mapping of two variables simultaneously.
+Query OpenStreetMap for Columbus street network and building footprints using osmdata R package
+
+Load ACS vacancy rate data at census tract level via tidycensus; compute vacancy quartiles
+
+Produce a bivariate choropleth map of streetlight density vs. vacancy rates using the biscale package in R
+
+Identify 3 spatial outliers where perceived safety (perception score) diverges from infrastructure data (vacancy, lighting)
+
+**Self-Graded Lab: Lab 3 — The Felt Environment: Mapping Perceived vs. Measured Safety**
+
+- **Legal Focus:**  In 2-3 sentences, explain the legal argument for why using street-level imagery for public health surveillance without consent might raise Fourth Amendment concerns.
+- **Health Focus:**  Using the provided OSM + ACS merged dataset, produce a choropleth map of vacancy rates by census tract in Columbus. Which quadrant (high vacancy / high perceived safety) would be the most informative for a housing policy intervention?
+- **Data:**  Load the provided perception score dataset from Carmen. Compute the correlation between the 'perceived safety' score and vacancy rate across census tracts. Is it positive or negative?
+- **R Code:**  Using the biscale package, produce a bivariate map of vacancy rate (x) and streetlight density (y) by census tract. Include the biscale legend using bi_legend().
+- **check_answer() prompt:**  What is the Pearson correlation between perceived safety scores and the vacancy rate across census tracts? What direction and magnitude would you expect, and does the data confirm it?
+- **Reflection (100 words):**  Describe one thing the bivariate map revealed that neither variable alone would have shown. How does this relate to how you are thinking about your Assignment 2 topic?
+
+> **ASSIGNMENT 1 DUE TONIGHT Friday Jan 30 by 11:59 PM (submit via Carmen)**
+
+
+### Week 4 | Feb 2-6 | Social Cohesion and Health
+
+**Theme: Collective Efficacy, Trust, and Community Health**
+
+Robert Sampson's landmark Chicago research established that collective efficacy — a neighborhood's shared willingness to intervene for the common good — is one of the strongest predictors of health and safety outcomes, independent of poverty. This week we map social vulnerability alongside CDC PLACES health outcome data, focusing on variables that capture social isolation and lack of emotional support — dimensions of health that are often invisible in administrative data. We build bivariate maps that visually communicate the relationship between neighborhood social conditions and population health.
+
+**Required Readings**
+
+Sampson, R. J. (2012). Great American City. [Chapter 7: Collective Efficacy and the New Urban Sociology, pp. 149-181].
+
+Putnam, R. D. (2000). Bowling Alone. [Chapter 16: Education and Children's Well-Being — Carmen excerpt, pp. 296-306].
+
+Chetty, R., Stepner, M., et al. (2016). The association between income and life expectancy in the United States, 2001-2014. Journal of the American Medical Association, 315(16), 1750-1766.* [Read non-technical summary first — linked on Carmen]
+
+Irwin, N., & Bui, Q. (2016). The rich live longer everywhere. For the poor, geography matters. The New York Times.*
+
+SEARCH: 'Sampson, Raudenbush & Earls (1997) Neighborhoods and violent crime: a multilevel study of collective efficacy. Science 277, 918-924' -- Google Scholar
+
+SEARCH: 'Diez Roux & Mair (2010) Neighborhoods and health. Annals of the New York Academy of Sciences 1186, 125-145' -- Google Scholar
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Home Rule and local governance authority; Fair Housing Act and exclusionary zoning; legal frameworks for community health investment; ARPA (American Rescue Plan Act) and community health block grant allocation criteria.
+- **Health Focus:**  CDC PLACES health outcome data, specifically the 'Lack of Social and Emotional Support' measure (CASTHMA model) and 'Mental Health Not Good' variable — two outcomes that track closely with neighborhood collective efficacy and social isolation.
+- **Data:**  CDC Social Vulnerability Index (SVI), 2020, available at atsdr.cdc.gov/placeandhealth/svi; CDC PLACES Local Data for Better Health (tract-level), available at cdc.gov/places — specifically variables CASTHMA (current asthma), MHLTH (mental health), SOCIAL (lack of social and emotional support), and CSMOKING.
+- **R Code:**  Read SVI and PLACES CSV files; merge by GEOID using dplyr::left_join(); biscale package for bivariate choropleth (biscale::bi_class(), bi_legend()); ggplot2 geom_sf() with two-variable color encoding; cowplot::plot_grid() to combine map and legend.
+Load CDC SVI 2020 data and CDC PLACES tract-level data for Ohio, both available as CSV download from CDC websites
+
+Merge SVI and PLACES by census tract GEOID using dplyr::left_join()
+
+Produce Bivariate Map 1: SVI overall score (x-axis) vs. PLACES 'Lack of Social and Emotional Support' (SOCIAL variable, y-axis) using biscale package; identify tracts in the High-High quadrant
+
+Produce Bivariate Map 2: SVI overall score (x-axis) vs. PLACES 'Mental Health Not Good' (MHLTH variable, y-axis); compare geographic pattern to Map 1
+
+Discuss: which tracts appear as high-burden on both maps? What does the spatial pattern suggest about where collective efficacy is lowest?
+
+**Self-Graded Lab: Lab 4 — Collective Efficacy and Health: Boston Neighborhood Survey + PLACES Bivariate Maps**
+
+- **Legal Focus:**  In 2-3 sentences, explain how the ARPA Community Health Block Grant program could use collective efficacy data to legally justify targeting funds to specific census tracts over others.
+- **Health Focus:**  From the Boston Neighborhood Survey (BNS) codebook (provided on Carmen, bostonarearesearchinitiative.net), the variable CollEff measures collective efficacy at the neighborhood level. The BNS also includes soccoh (Social Cohesion) and soccon (Social Control). Load the provided BNS tract-level dataset and produce a choropleth map of CollEff across Boston census tracts.
+- **Data:**  Load the provided BNS_Longitudinal_by_Tract.csv from Carmen. This file contains collective efficacy measures aggregated to the census tract level across three survey waves (2006, 2008, 2010). Filter to 2010 wave. Join to a Boston PLACES dataset (provided on Carmen) to obtain the MHLTH and SOCIAL variables for Boston tracts.
+- **R Code:**  Produce two bivariate maps for Boston: (1) CollEff (x) vs. MHLTH 'Mental Health Not Good' (y), and (2) CollEff (x) vs. SOCIAL 'Lack of Social and Emotional Support' (y). Use biscale::bi_class() with style='quantile' and the 'DkBlue' palette.
+- **check_answer() prompt:**  In your bivariate maps, which Boston neighborhoods appear in the Low CollEff / High Health Burden quadrant (bottom-right)? Name at least two neighborhoods and describe their geographic location.
+- **Reflection (100 words):**  Looking at your two bivariate maps side by side, which PLACES health outcome (mental health or lack of social support) has a stronger spatial association with collective efficacy? What does this suggest about which health outcome might respond most to community-level interventions?
+
+### Week 5 | Feb 9-13 | Who Does the Algorithm Think You Are?
+
+**Theme: Algorithmic Accountability, Bias, and Political Geography**
+
+Predictive risk models now influence who gets flagged for child welfare investigation, who is triaged first in an emergency department, and who qualifies for housing assistance. Crucially, these algorithms are built on data that is itself shaped by political decisions — including redistricting, which determines who votes in which district and thus which communities get political representation and public investment. This week we examine algorithmic bias in public health AND explore how redistricting data can reveal political geographies of health inequity.
+
+**Required Readings**
+
+Obermeyer, Z., et al. (2019). Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464), 447-453.*
+
+Benjamin, R. (2019). Race After Technology. [Chapter 1: The New Jim Code, pp. 1-50].
+
+Hvistendahl, M. (2016). Can 'predictive policing' prevent crime before it happens? Science News.* [Carmen]
+
+Kleinberg, J., Ludwig, J., & Mullainathan, S. (2016). A guide to solving social problems with machine learning. Harvard Business Review.* [hbr.org/2016/12/a-guide-to-solving-social-problems-with-machine-learning]
+
+Green, E. (2016). Why Democrats and Republicans literally speak different languages. The Atlantic.* [theatlantic.com/politics/archive/2016/07/why-democrats-and-republicans-literally-speak-different-languages/492539/]
+
+SEARCH: 'Eubanks, V. (2018) Automating Inequality -- Chapter 4: The Allegheny Algorithm. St. Martin's Press' [OSU Libraries]
+
+SEARCH: 'Mitchell & Gebru (2019) Model cards for model reporting. ACM FAccT' -- Google Scholar
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Due process and algorithmic decision-making in government; disparate impact doctrine under Title VI and the Civil Rights Act; the Voting Rights Act and redistricting as a legal framework for political representation; prison gerrymandering.
+- **Health Focus:**  How political geography (district boundaries) shapes public health investment; whether communities with high health burden are systematically gerrymandered out of political representation; the connection between algorithmic bias in public health systems and structural racism.
+- **Data:**  Redistricting Data Hub, Ohio state page (redistrictingdatahub.org/data/ohio): 2020 Census Block PL 94-171 data; 2023 ACS Poverty and Race data at the census tract level; 2024 General Election Precinct-Level Results; Approved 2025 Congressional Districts. All free downloads after free account registration.
+- **R Code:**  Download shapefiles from Redistricting Data Hub; load with sf::st_read(); join ACS poverty and race data by GEOID; map congressional district boundaries overlaid on health outcome data (PLACES) or SVI; compute summary statistics of health burden by congressional district.
+Download the 2025 Approved Ohio Congressional District boundaries shapefile from Redistricting Data Hub (redistrictingdatahub.org/data/ohio)
+
+Download the 2023 ACS Census Tract Race Data and Poverty Data for Ohio from Redistricting Data Hub
+
+Load both datasets in R using sf::st_read() and read_csv(); join by GEOID
+
+Perform a spatial join to assign each census tract to its congressional district using sf::st_join()
+
+Compute mean poverty rate and racial composition by congressional district; produce a bar chart comparing district-level poverty rates; identify which districts represent the highest-burden communities
+
+**Self-Graded Lab: Lab 5 — Redistricting, Political Geography, and Health: Ohio Congressional Districts**
+
+- **Legal Focus:**  In 3 sentences, explain what 'prison gerrymandering' is (see the Redistricting Data Hub report on this topic at redistrictingdatahub.org) and how it affects political representation for communities with high incarceration rates.
+- **Health Focus:**  Download the 2023 ACS Census Tract Poverty Data for Ohio from Redistricting Data Hub (redistrictingdatahub.org/data/ohio). Load in R and identify the 5 census tracts with the highest poverty rates. Which congressional district do they fall in?
+- **Data:**  Download the 2024 General Election Precinct-Level Results for Ohio from Redistricting Data Hub. Load in R. Compute the mean Democratic vote share by county. Which counties voted most heavily Democratic? Which voted most Republican?
+- **R Code:**  Join the congressional district shapefile to the PLACES 'Lack of Social and Emotional Support' (SOCIAL) data from Week 4. Produce a choropleth map where census tracts are colored by SOCIAL burden, with congressional district boundaries overlaid as bold lines.
+- **check_answer() prompt:**  Which Ohio congressional district has the highest mean SOCIAL burden (lack of social and emotional support) among its constituent census tracts? What is the racial composition of that district's population?
+- **Reflection (100 words):**  Based on your map, do the congressional districts with the highest public health burden appear to have proportionate political representation? What would 'proportionate' even mean in this context, and why does it matter for public health policy?
+
+### Week 6 | Feb 16-20 | The Stories Clinical Data Won't Tell You
+
+**Theme: NLP and Injury Surveillance: Reading the Invisible**
+
+Structured data — ICD codes, admission diagnoses — systematically misses the context of injury. A woman admitted for 'facial trauma' may be a survivor of intimate partner violence; a child coded for 'accidental fall' may have been pushed. This week we use natural language processing to extract hidden injury mechanisms from ED narratives and introduce the CourtListener API for scraping and analyzing public health caselaw.
+
+
+> *Assignment 2 Check-In: Assignment 2 is due Friday Feb 27 — one week from now. By this point you should have: (1) chosen your community health topic (gun violence, maternal health, opioid overdose, IPV, or ACEs); (2) identified at least two datasets from the course data catalog that you will use; and (3) decided on a geographic area (Franklin County, another Ohio county, or a city). If you have not done these three things, use this weekend to finalize your choices and begin downloading your data.*
+
+**Required Readings**
+
+Barboza-Salerno, G., et al. (2026). Sex-based differences in injury patterns from ED narratives of intimate partner violence. American Journal of Emergency Medicine.* [re-read with attention to NLP methods section]
+
+SEARCH: 'Garg et al. (2023) Large language models for public health surveillance. American Journal of Public Health' -- Google Scholar
+
+SEARCH: 'Jurafsky & Martin (2024) Speech and Language Processing, Ch. 6: Vector Semantics' [free at web.stanford.edu/~jurafsky/slp3/]
+
+CDC NVDRS Coding Manual (2023): Understanding narrative coding for violent death surveillance.* [Carmen]
+
+ISSUES Lab (2024). How to analyze caselaw using CourtListener's API in R. Medium / Big Data for Social Justice. [bigdataforsocialjustice.medium.com/how-to-analyze-caselaw-using-courtlisteners-api-in-r-cb88ef28d00a -- read before lab]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Burden of proof and narrative evidence in civil litigation; how text-based data extraction is used to establish patterns of systematic harm; the Free Law Project and public access to federal court decisions via CourtListener (courtlistener.com).
+- **Health Focus:**  The gap between structured ICD-coded injury data and the actual mechanisms of harm recorded in clinical narratives; intimate partner violence as a systematically undercoded diagnosis; natural language processing as an injury surveillance tool.
+- **Data:**  NEISS (National Electronic Injury Surveillance System) narrative data subset (provided on Carmen, from cpsc.gov/Research--Statistics/NEISS-Injury-Data); CourtListener federal court decision API (courtlistener.com/help/api); CDC NVDRS narrative excerpts (Carmen, IRB-approved subset).
+- **R Code:**  tidytext::unnest_tokens() for tokenization; tidytext::bind_tf_idf() for TF-IDF analysis; stringr::str_detect() and regex patterns for mechanism extraction; httr::GET() and jsonlite::fromJSON() for CourtListener API calls; ggplot2 for frequency bar charts and timeline plots.
+Load NEISS narrative data subset from Carmen; use tidytext to tokenize narratives and compute TF-IDF by injury type and sex
+
+Extract mechanism categories (Object, Action, Location) using regex and keyword dictionaries provided on Carmen
+
+CourtListener lab: make httr::GET() API calls to search for federal IPV + housing cases; download case metadata (court, date, docket number); produce a timeline of caselaw by federal circuit
+
+Optional: pass 20 anonymized ED narratives to an LLM API for mechanism classification; compare output to regex results
+
+**Self-Graded Lab: Lab 6 — Reading the Invisible: NLP on Injury Narratives and Legal Text**
+
+- **Legal Focus:**  Using the CourtListener API in R (tutorial on Carmen), search for Ohio federal district court cases mentioning 'domestic violence' filed between 2010 and 2024. Download titles and filing dates. Produce a time series plot of case counts by year.
+- **Health Focus:**  Load the provided NEISS narrative subset. Using tidytext, compute word frequency for female-coded injury narratives vs. male-coded narratives. Produce a comparison bar chart of the top 15 most distinctive words for each group.
+- **Data:**  Load the NEISS dataset from Carmen. The key variables are: narrative (free text), sex (M/F), body_part, diagnosis, product_code, and age. Explore the narrative column using head() and nchar() to understand text length and structure.
+- **R Code:**  Use str_detect(narrative, regex('struck|hit|pushed|choked|grabbed', ignore_case=TRUE)) to flag narratives with IPV-related action words. Compute the proportion of flagged narratives by sex. Then use tidytext::unnest_tokens() to tokenize and bind_tf_idf() to find the most distinctive terms.
+- **check_answer() prompt:**  What proportion of female narratives contain at least one IPV-related action term from the provided regex? Is this significantly different from the proportion in male narratives (run prop.test())?
+- **Reflection (100 words):**  Describe one specific thing you noticed in the NEISS narratives that structured ICD-coded data would never capture. How could this narrative pattern be used as evidence in a legal proceeding or to support a policy change?
+
+## SECTION 2: Applied Community Health — Data in Action (Weeks 7-12)
+
+---
+
+
+### Week 7 | Feb 23-27 | Where You Live Is Your Health
+
+**Theme: Legal, Physical & Social Determinants: Environmental Justice and Zoning**
+
+Industrial zoning is not random. Historically, hazardous facilities were sited near communities with the least political power. This week we use EPA EJScreen data, buffer analysis, and spatial joins to identify residential clusters at highest risk of lead exposure. We examine the legal doctrine of 'police power' and two landmark health policy studies: the Oregon Medicaid experiment and the Clean Air Act's long-term consequences for children's earnings.
+
+
+> *Assignment 2 Check-In: Assignment 2 is due tonight (Friday Feb 27). Your submission should include: (1) a choropleth map of your chosen health topic by census tract or county; (2) a spatial cluster analysis or buffer/join identifying where burden concentrates; (3) at least one social determinant overlay layer; (4) a 500-word policy implications section. If your R Markdown document is not knitting correctly, bring your error message to office hours or post to Carmen by 5 PM today.*
+
+**Required Readings**
+
+Schilling, J., & Linton, L. S. (2005). The public health roots of zoning. American Journal of Preventive Medicine, 28(2S2), 96-104.*
+
+Maantay, J. (2001). Zoning, equity, and public health. American Journal of Public Health, 91(7), 1033-1041.*
+
+SEARCH: 'Morello-Frosch & Shenassa (2006) The environmental riskscape and social inequality. Environmental Health Perspectives 114(8)' -- Google Scholar
+
+Wiley & Gostin (2025). [Chapter 4: Police Power, Zoning, and Environmental Health]. UC Press.
+
+Baicker, K., et al. (2013). The Oregon experiment — effects of Medicaid on clinical outcomes. New England Journal of Medicine, 368, 1713-1722.*
+
+Isen, A., Rossin-Slater, M., & Walker, W. R. (2014). Every breath you take — every dollar you'll make: the long-term consequences of the Clean Air Act of 1970. [Non-technical summary: cepr.org/voxeu/columns/every-breath-you-take-every-dollar-youll-make-long-term-consequences-clean-air-act]
+
+Dartmouth Atlas of Health Care. [Data resource: dartmouthatlas.org — explore regional variation in health care spending before class]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Police power doctrine and its use to justify zoning regulations; NEPA (National Environmental Policy Act) environmental impact assessment requirements; Clean Air Act enforcement history; Justice40 Initiative requiring 40% of federal environmental investment to flow to disadvantaged communities.
+- **Health Focus:**  Cumulative environmental burden — the compounding of multiple environmental hazards (air pollution, proximity to industrial sites, lack of greenspace) in the same neighborhoods — and its relationship to lead exposure, asthma, and childhood developmental outcomes.
+- **Data:**  EPA EJScreen Environmental Justice Mapping Tool (ejscreen.epa.gov — download data or use API); Franklin County municipal zoning shapefile (provided on Carmen from county GIS portal); CDC Social Vulnerability Index 2020 (atsdr.cdc.gov/placeandhealth/svi); HMDA Ohio mortgage data (ffiec.cfpb.gov/hmda).
+- **R Code:**  QGIS: Buffer tool (Vector > Geoprocessing Tools > Buffer) at 500m around industrial parcels; Vector > Data Management > Join attributes by location. R: sf::st_buffer(); sf::st_join(); dplyr::summarise() to count residential parcels and population within buffers; ggplot2 choropleth of compound vulnerability scores.
+Import EPA EJScreen data for Franklin County into QGIS; map cumulative environmental burden index by census tract
+
+Import municipal zoning shapefile; create 500m buffers around all industrial-zoned parcels using QGIS Buffer tool
+
+Perform spatial join to identify residential parcels and school locations within high-risk industrial buffers
+
+Join with CDC SVI in R to calculate compound vulnerability scores for exposed populations; produce choropleth map
+
+Load Ohio HMDA subset; compute loan denial rates by race and census tract; map overlaid with EJScreen burden index
+
+**Self-Graded Lab: Lab 7 — Industrial Exposure and Residential Vulnerability: Buffer Analysis in QGIS and R**
+
+- **Legal Focus:**  In 2-3 sentences, explain what the Justice40 Initiative requires and how the EJScreen data you used in class could be used to legally justify directing Clean Air Act enforcement resources to specific Ohio census tracts.
+- **Health Focus:**  Load the provided EJScreen + SVI merged dataset. Produce a choropleth map of the EJScreen 'PM2.5' (particulate matter) indicator by census tract in Franklin County. Describe the geographic pattern in 2 sentences.
+- **Data:**  Using the provided Franklin County zoning shapefile, count the number of residential census tracts within 500m of at least one industrial-zoned parcel. What percentage of Franklin County's residential tracts have industrial exposure?
+- **R Code:**  Load the EJScreen and HMDA datasets. Join by GEOID. Fit a simple linear regression: lm(loan_denial_rate ~ ejscreen_burden_index, data = ...). Interpret the slope coefficient. Is environmental burden a significant predictor of loan denial rates?
+- **check_answer() prompt:**  What is the slope coefficient from your regression of loan denial rate on EJScreen burden index? Is the coefficient positive or negative, and is it statistically significant at p < 0.05?
+- **Reflection (100 words):**  Describe what the spatial join in this lab did — specifically, what two datasets were joined, on what criterion, and what new information it created. Why is a spatial join more informative than a simple attribute join when studying environmental health?
+
+> **ASSIGNMENT 2 DUE TONIGHT Friday Feb 27 by 11:59 PM (submit via Carmen)**
+
+
+### Week 8 | Mar 1-5 | When Pregnancy Meets Poverty
+
+**Theme: Maternal Health: Structural Racism, Geographic Disparities, and Birth Outcomes**
+
+The United States spends more on health care than any comparable nation and has the worst maternal mortality rate among high-income countries. Black women are more than three times as likely as white women to experience a pregnancy-related death — a disparity that persists after controlling for income, education, and comorbidities. This week we use the Washington Tracking Network's publicly available preterm birth data to build spatial maps of birth outcome disparities, examining how geography intersects with race and economic stress to shape the conditions of birth.
+
+**Required Readings**
+
+Evans, M., Nimo-Sefah, L., & Bailey, J. (2023). Listen to the Whispers before They Become Screams: Addressing Black Maternal Morbidity and Mortality. Healthcare, 11(3), 438.*
+
+Desmond, M. (2016). Evicted. [Chapter 18: Lobster on Food Stamps; and Epilogue: Home and Hope, pp. 293-330].
+
+Krieger, N., et al. (2020). Structural racism, historical redlining, and risk of preterm birth. American Journal of Public Health.* [review from Week 2 with new analytical lens]
+
+SEARCH: 'Petersen et al. (2019) Racial/ethnic disparities in pregnancy-related deaths, United States, 2007-2016. MMWR 68(35)' -- CDC website
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Equal Credit Opportunity Act and its failure to prevent reverse redlining targeting minority neighborhoods for predatory lending; reproductive rights and data privacy; state and federal Medicaid coverage rules for prenatal care and their variation by state.
+- **Health Focus:**  Preterm birth (< 37 weeks gestation) as a leading cause of infant mortality and lifelong disability; racial disparities in preterm birth that persist even when controlling for socioeconomic status; economic stressors (housing instability, foreclosure, eviction) as physiological stressors affecting birth outcomes.
+- **Data:**  Washington Tracking Network (WTN) — preterm birth data by county and by race/ethnicity, available at fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81. Select 'Reproductive and Birth Outcomes' > 'Preterm Birth.' Download county-level CSV. Also: CDC Social Vulnerability Index (atsdr.cdc.gov/placeandhealth/svi) for Washington state; HOLC redlining shapefiles for Seattle/Tacoma (dsl.richmond.edu/panorama/redlining).
+- **R Code:**  read_csv() to load WTN preterm birth county data; tigris::counties() to get Washington state county shapefiles; dplyr::left_join() by county FIPS; ggplot2 geom_sf() choropleth of preterm birth rates; facet_wrap(~race_ethnicity) to produce small multiples by racial group; cowplot::plot_grid() to combine faceted maps.
+Download Washington state county-level preterm birth data by race/ethnicity from the Washington Tracking Network (fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81) — select Reproductive and Birth Outcomes > Preterm Birth
+
+Load county shapefile for Washington state using tigris::counties(state='WA', cb=TRUE)
+
+Join preterm birth data to shapefile by county FIPS code; compute preterm birth rate per 1,000 births
+
+Produce a faceted choropleth map with one panel per racial/ethnic group (White, Black, Hispanic, AIAN) showing preterm birth rates by county
+
+Overlay WA county HOLC redlining boundaries (Seattle, Tacoma, Spokane) to examine whether high-preterm-birth counties correspond to historically redlined areas
+
+**Self-Graded Lab: Lab 8 — Mapping Preterm Birth Disparities: Washington State Tracking Network Data**
+
+- **Legal Focus:**  In 2-3 sentences, explain how state Medicaid coverage rules for prenatal care (which vary dramatically by state) create a legal framework that shapes birth outcomes — and what a uniform federal standard might change.
+- **Health Focus:**  Download the Washington state preterm birth data from the WTN portal (fortress.wa.gov/doh/wtn/WTNPortal/home/#!q0=81). Which three Washington counties have the highest preterm birth rates for Black mothers? Which counties have the largest racial gap (Black rate minus White rate)?
+- **Data:**  Load the WTN preterm birth CSV from Carmen (pre-downloaded and formatted). The key variables are: county_fips, race_ethnicity, preterm_births, total_births, preterm_rate. Compute preterm_rate if not provided as: (preterm_births / total_births) * 1000.
+- **R Code:**  Join the WTN data to the Washington county shapefile using tigris::counties(state='WA'). Produce a faceted choropleth using facet_wrap(~race_ethnicity). Use scale_fill_viridis_c(option='plasma') for the color scale and coord_sf() for proper map projection.
+- **check_answer() prompt:**  What is the statewide mean preterm birth rate for Black mothers in Washington? How does it compare to the rate for White mothers? Express this as both an absolute difference and a rate ratio.
+- **Reflection (100 words):**  Looking at your faceted map, describe one geographic pattern that differs between racial groups — for example, a county where one group has high rates but another has low rates. What social or historical factors might explain this local pattern?
+
+### Week 9 | Mar 8-12 | Children Are Not Collateral Damage
+
+**Theme: Child Health: Lead, ACEs, School Environments, and Cumulative Harm**
+
+Adverse childhood experiences — abuse, neglect, household dysfunction, and exposure to community violence — are among the strongest known predictors of adult physical and mental health. They are also distributed by ZIP code. New research by Barboza-Salerno et al. (2026) advances an environmental justice framework that moves beyond individual-level social disadvantage to examine how neighborhood conditions predict child maltreatment risk.
+
+**Required Readings**
+
+Shonkoff, J. P., et al. (2012). The lifelong effects of early childhood adversity and toxic stress. Pediatrics, 129(1), e232-e246.*
+
+Barboza-Salerno, G., Harrington, T., Ramesh, B., Stanek, C., & Duhaney, S. (2026). Beyond social disadvantage: advancing an environmental justice framework to address child maltreatment risk. International Journal on Child Maltreatment: Research, Policy and Practice, 1-26.* [Priority reading this week]
+
+SEARCH: 'Felitti et al. (1998) Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: the ACE study. American Journal of Preventive Medicine 14(4), 245-258'
+
+SEARCH: 'Merrick et al. (2019) Vital signs: estimated proportion of adult health problems attributable to adverse childhood experiences. MMWR 68(44)' -- CDC website
+
+Isen, A., Rossin-Slater, M., & Walker, W. R. (2014). Every breath you take — every dollar you'll make. [Re-read with focus on child health outcomes] -- Week 7 reading
+
+Maantay, J. (2001). Zoning, equity, and public health. [Re-read with child health and school proximity focus] -- Week 7 reading
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Child welfare law and mandatory reporting obligations under CAPTA (Child Abuse Prevention and Treatment Act); NEPA and children's environmental health protections; Individuals with Disabilities Education Act (IDEA) and school safety mandates; Title IV-E foster care funding and its relationship to neighborhood poverty.
+- **Health Focus:**  ACEs (adverse childhood experiences) as cumulative risk factors for adult cardiovascular disease, cancer, substance use disorder, and early death; the dose-response relationship between ACE score and adult health outcomes; environmental toxin exposure (lead, air pollution) as an additional ACE-like stressor.
+- **Data:**  K-12 School Shooting Database (SSDB, k12ssdb.org); NCES school location shapefiles (nces.ed.gov/programs/edge/geographic/schoollocations); CDC Social Vulnerability Index 2020; EPA EJScreen (ejscreen.epa.gov); Area Deprivation Index from Neighborhood Atlas (neighborhoodatlas.medicine.wisc.edu); county-level ACE prevalence from CDC BRFSS.
+- **R Code:**  Load school shooting CSV from k12ssdb.org; join to NCES school shapefile by NCESSCH school ID; sf::st_buffer() at 500m around schools; sf::st_join() to identify schools within industrial buffers from Week 7; scale() to standardize ADI, SVI, and EJScreen components; rowMeans() to compute composite vulnerability index.
+Import K-12 School Shooting Database (k12ssdb.org) and NCES school location shapefiles into QGIS
+
+Create spatial overlay: identify schools within 500m of industrial sites using buffers from Week 7 lab
+
+Join with ADI, SVI, and county-level ACE prevalence data in R; construct a composite child vulnerability index by census tract using standardized z-scores
+
+Map composite index by census tract; identify top 10 highest-burden tracts in Franklin County
+
+Apply Barboza-Salerno et al. (2026) EJ framework: add EJScreen particulate matter and proximity-to-hazardous-sites variables; test whether adding EJ indicators changes which tracts rank highest
+
+**Self-Graded Lab: Lab 9 — The Geography of Childhood Adversity: Building a Composite Vulnerability Index**
+
+- **Legal Focus:**  CAPTA requires states to maintain child abuse and neglect reporting systems. In 2-3 sentences, explain how county-level ACE prevalence data derived from BRFSS could be used in a legal argument that a state is not fulfilling its CAPTA obligations in specific geographic areas.
+- **Health Focus:**  Load the provided merged ADI + SVI + EJScreen dataset from Carmen. Produce a choropleth map of the composite child vulnerability index (pre-computed as the mean of standardized ADI, SVI_RPL_THEMES, and EJScreen PM2.5). Which 5 Franklin County census tracts score highest?
+- **Data:**  Download county-level ACE prevalence data from the CDC BRFSS SMART data (cdc.gov/brfss/smart) — provided as a pre-formatted CSV on Carmen. Join to the Franklin County shapefile by county FIPS. Map ACE prevalence alongside the composite index — do the same areas score high on both?
+- **R Code:**  Use scale() to standardize each of ADI, SVI_RPL_THEMES, and EJScreen_PM25. Then compute index = rowMeans(cbind(ADI_z, SVI_z, EJ_z), na.rm=TRUE). Produce side-by-side choropleth maps of each component alongside the composite index using cowplot::plot_grid().
+- **check_answer() prompt:**  Which Franklin County census tract has the highest composite child vulnerability score? What are the values of each of its three component indicators (ADI percentile, SVI percentile, EJScreen PM2.5 percentile)?
+- **Reflection (100 words):**  Does the Barboza-Salerno et al. (2026) EJ framework add value over just using ADI or SVI alone? Looking at your maps, describe one census tract where adding the EJ indicator changed its vulnerability ranking significantly, and explain why this matters for targeting child welfare resources.
+
+### SPRING BREAK — [Verify exact dates at registrar.osu.edu — approximately March 15-19, 2027] — No Classes
+
+
+### Week 10 | Mar 22-26 | Guns, Greenery, and the Geography of Violence
+
+**Theme: Gun Violence Prevention: Fatal and Nonfatal Injury Patterns, Tree Equity, and Policy**
+
+Gun violence is not random. It clusters in corridors shaped by disinvestment, concentrated poverty, lack of greenspace, and the same historical redlining patterns examined in Week 2. This week we use Chicago's publicly available fatal and nonfatal shooting dataset — one of the most detailed open-source urban violence databases in the country — to map violence patterns, examine environmental predictors including tree equity, and connect the spatial analysis to Public Nuisance Law and environmental accountability frameworks.
+
+
+> *Assignment 3 Check-In: Assignment 3 is due tonight. Your 2-page policy brief should: (1) open with a data-grounded problem statement naming your specific community; (2) present exactly 3-5 findings with cited statistics or maps from your own analysis; (3) name a specific decision-maker as the addressee; (4) propose one concrete, feasible recommendation; and (5) acknowledge one data limitation. Graduate students: your legal analysis page should cite the specific statute or ordinance most relevant to your recommendation.*
+
+**Required Readings**
+
+U.S. Surgeon General (2024). Firearm Violence: A Public Health Crisis in America. Advisory Report.* [Executive Summary and Chapter 2]
+
+SEARCH: 'Garvin et al. (2013) Greening vacant lots reduces violence. American Journal of Epidemiology' -- Google Scholar
+
+Barboza-Salerno, G., et al. (2025). Redlining, reinvestment, and racial segregation: Bayesian spatial analysis of mortgage lending and firearm violence. Injury Epidemiology.* [Week 2 reading, re-read with corridor analysis focus]
+
+SEARCH: 'Branas et al. (2018) Citywide cluster randomized trial to restore blighted vacant land and its effects on violence, crime, and fear. PNAS 115(12)' -- Google Scholar
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Public Nuisance Law and holding property owners legally responsible for environmental conditions that facilitate violence; Justice40 Initiative mandating equitable distribution of federal environmental investment; Second Amendment jurisprudence and the limits of gun violence research funding under the Dickey Amendment.
+- **Health Focus:**  Fatal and nonfatal firearm injuries as a public health epidemic; the distinction between homicides and nonfatal shootings in surveillance (nonfatal data is systematically undercounted); the environmental health argument that urban tree canopy deficits create heat islands that are associated with increased violence.
+- **Data:**  Chicago Violence Reduction — Victims of Homicides and Non-Fatal Shootings dataset (City of Chicago Data Portal: data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data — direct download as CSV, updated regularly, free); Tree Equity Score (American Forests, treeequityscore.org); Chicago community area boundaries (City of Chicago Data Portal); HOLC shapefiles for Chicago (dsl.richmond.edu/panorama/redlining).
+- **R Code:**  read_csv() for Chicago violence data; lubridate::mdy() to parse dates; dplyr::group_by(community_area) + summarise(n()) to aggregate by area; sf::st_as_sf(coords=c('longitude','latitude'), crs=4326) to convert point data; sf::st_join() for spatial join to community area polygons; ggplot2 geom_sf() choropleth; geom_point() for dot density map of individual incidents.
+Download Chicago Violence Reduction — Victims of Homicides and Non-Fatal Shootings data from the City of Chicago Data Portal (data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr/about_data); load in R
+
+Convert latitude/longitude columns to sf spatial object using st_as_sf(); set CRS to EPSG:4326; transform to Illinois State Plane projection (EPSG:26971) for accurate area calculations
+
+Aggregate shooting incidents to Chicago community area using sf::st_join() and dplyr::count(); compute incident rate per 10,000 population using 2020 Census population data
+
+Produce a choropleth map of shooting incident rates by community area; overlay HOLC grade boundaries to examine the redlining-violence relationship
+
+Load Tree Equity Score data for Chicago (treeequityscore.org); join to community areas; produce a bivariate map of violence rate vs. tree equity score using biscale
+
+**Self-Graded Lab: Lab 10 — Chicago Fatal and Nonfatal Shooting Patterns: Point Data, Aggregation, and Tree Equity**
+
+- **Legal Focus:**  In 2-3 sentences, explain the Public Nuisance Law argument for holding a property owner or municipality legally responsible for conditions (e.g., vacant lots, heat islands from lack of tree cover) that predictably increase violence rates. What standard of evidence would a court require?
+- **Health Focus:**  Load the Chicago Violence Reduction dataset from Carmen (pre-downloaded from data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr). Filter to homicides only. Which 5 Chicago community areas had the most homicides? Which had the fewest? Produce a ranked bar chart.
+- **Data:**  The key variables in the Chicago dataset are: date, community_area, incident_type ('homicide' or 'non-fatal shooting'), latitude, longitude, gunshot_injury_i, and age. Compute the ratio of nonfatal shootings to homicides by community area. Which areas have the highest nonfatal-to-fatal ratio? What might this indicate about emergency medical response capacity?
+- **R Code:**  Convert the violence dataset to an sf object using st_as_sf(coords=c('longitude','latitude'), crs=4326). Perform a spatial join to the Chicago community area polygon shapefile using st_join(). Use group_by(community_area) and summarise(shooting_count=n()) to get counts. Join to population data and compute rate per 10,000.
+- **check_answer() prompt:**  What is the Pearson correlation between the shooting rate per 10,000 and the Tree Equity Score by Chicago community area? Is it statistically significant at p < 0.05? What is the direction of the relationship?
+- **Reflection (100 words):**  Describe one difference you noticed between the homicide map and the nonfatal shooting map for Chicago. What does this spatial discrepancy suggest about the factors that determine whether a shooting is fatal — and what policy intervention might address those factors?
+
+> **ASSIGNMENT 3 DUE TONIGHT Friday Mar 26 by 11:59 PM (submit via Carmen)**
+
+
+### Week 11 | Mar 29-Apr 2 | Deaths of Despair
+
+**Theme: The Opioid Crisis: Structural Causes, Settlement Law, and Treatment Deserts**
+
+The opioid epidemic's geography tracks disinvestment, unemployment, and despair with remarkable precision. Ohio has been one of the hardest-hit states — and a leader in legal settlements requiring data-justified resource allocation. This week we map treatment 'deserts' and build an interactive R-Shiny dashboard for stakeholder engagement.
+
+**Required Readings**
+
+Dasgupta, N., Beletsky, L., & Ciccarone, D. (2018). Opioid crisis: no easy fix to its social and economic determinants. American Journal of Public Health, 108(2), 182-186.*
+
+Desmond, M. (2016). Evicted. [Chapter 5: Thirteenth Street, pp. 81-100].
+
+SEARCH: 'Kolodny et al. (2015) The prescription opioid and heroin crisis: a public health approach to an epidemic of addiction. Annual Review of Public Health 36' -- Google Scholar
+
+GAO (2023). Best Practices in Data-Informed Opioid Policy: Lessons from State Settlement Implementation.* [Executive Summary, Carmen]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Opioid settlement law and fiduciary responsibility; the legal requirement for states to spend settlement funds on 'abatement' (direct harm reduction) rather than general government purposes; how epidemiological data and spatial analysis are used to satisfy legal burden-of-proof standards in settlement fund allocation decisions.
+- **Health Focus:**  Geographic access to medication for opioid use disorder (MOUD — buprenorphine, methadone, naltrexone) as a social determinant of overdose mortality; treatment 'deserts' defined as areas with overdose rates above the county median AND drive-time to nearest MOUD provider exceeding 30 minutes.
+- **Data:**  NVDRS (National Violent Death Reporting System) overdose mortality data — restricted use; Ohio overdose mortality data provided on Carmen from Ohio Department of Health (odh.ohio.gov); SAMHSA Treatment Locator MOUD provider data (findtreatment.gov/api — pre-downloaded CSV on Carmen); CDC SVI 2020.
+- **R Code:**  osrm::osrmIsochrone() to compute drive-time isochrones around each MOUD provider (30-minute radius); sf::st_join() to identify census tracts within 30-minute drive of a provider; dplyr::case_when() to classify tracts as treatment deserts; shiny::fluidPage(), shiny::sliderInput(), renderPlot() for interactive Shiny app.
+Load Ohio overdose mortality data (provided on Carmen) and SAMHSA MOUD provider locations
+
+Calculate 30-minute drive-time isochrones around each MOUD provider using osrm::osrmIsochrone()
+
+Identify census tracts with overdose rates above county median AND outside all 30-min provider isochrones — these are treatment deserts
+
+Build a basic R-Shiny app displaying the treatment desert map with a slider for drive-time threshold (15, 30, 45, 60 minutes) and SVI overlay toggle
+
+**Self-Graded Lab: Lab 11 — Ohio Opioid Treatment Desert Map: Introduction to R-Shiny**
+
+- **Legal Focus:**  In 2-3 sentences, explain what the GAO means by 'abatement' in the context of opioid settlement funds, and give one specific example of an expenditure that would qualify and one that would not.
+- **Health Focus:**  Load the Ohio overdose mortality CSV from Carmen. Compute the county-level overdose mortality rate per 100,000 population for the most recent available year. Produce a choropleth map. Which 5 Ohio counties have the highest rates? Are these urban or rural counties?
+- **Data:**  Load the SAMHSA MOUD provider CSV from Carmen. Count the number of buprenorphine-certified providers by Ohio county. Which counties have zero providers? Join to the overdose mortality data: do counties with more providers have lower overdose rates?
+- **R Code:**  Use the provided pre-computed isochrone polygons (Carmen) to classify census tracts as within or outside 30-minute MOUD access. Then modify the provided Shiny app template to add a selectInput() dropdown allowing users to filter by county.
+- **check_answer() prompt:**  How many Ohio census tracts meet the treatment desert definition (overdose rate > county median AND drive time > 30 min)? What proportion of Ohio's total overdose deaths in the most recent year occurred in treatment desert tracts?
+- **Reflection (100 words):**  Describe what you learned from interacting with the Shiny dashboard that you could not learn from a static map. How does the ability to change the drive-time threshold interactively change your policy recommendation about where to locate new MOUD providers?
+
+### Week 12 | Apr 5-9 | The Hidden Epidemic
+
+**Theme: Intimate Partner Violence: Surveillance, Narratives, and Legal Evidence**
+
+Intimate partner violence is systematically underreported in structured data. Emergency department codes, police records, and death certificates each capture only a fraction of the true burden. This week we return to NLP — applied to IPV case narratives — to extract injury mechanisms invisible in ICD codes and examine how narrative-based data is used in legal proceedings.
+
+**Required Readings**
+
+Barboza-Salerno, G., et al. (2026). Sex-based differences in injury patterns from ED narratives of IPV. American Journal of Emergency Medicine.* [third reading — focus on policy implications]
+
+CDC (2025). National Intimate Partner and Sexual Violence Survey 2023/2024 Data Brief.* [download from cdc.gov/nisvs]
+
+SEARCH: 'Tjaden & Thoennes (2000) Full report of the prevalence, incidence, and consequences of violence against women. NIJ/CDC' -- for historical baseline
+
+National Academies of Sciences (2024). Essential Health Care Services Addressing Intimate Partner Violence. [Chapter 2: IPV in Steady State Conditions].* [NAP.edu — free PDF]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Burden of proof in civil IPV litigation; how pattern evidence from narrative-based data extraction can establish systematic harm; Violence Against Women Act (VAWA) data collection and reporting requirements; mandatory reporting laws for IPV in healthcare settings and their limitations.
+- **Health Focus:**  The surveillance gap between structured ICD-coded IPV data and actual IPV burden; sex-based differences in injury mechanism patterns (blunt object trauma, strangulation, weapon use); IPV as a driver of preterm birth, mental health disorders, and substance use — connecting to Week 8 maternal health findings.
+- **Data:**  De-identified IPV ED narrative dataset (Carmen, IRB-approved subset from NEISS with IPV-coded incidents); NISVS 2023/2024 Data Brief (cdc.gov/nisvs); HOLC shapefiles for Columbus; CDC SVI 2020.
+- **R Code:**  stringr::str_detect() with regex patterns for IPV mechanism extraction; tidytext::unnest_tokens() for tokenization; dplyr::case_when() to classify Object / Action / Location; sf::st_as_sf() to map geocoded incidents; ggplot2 geom_sf() choropleth; chisq.test() to test whether mechanism severity differs by HOLC grade.
+Load de-identified IPV ED narrative dataset (Carmen, IRB-approved subset)
+
+Develop and apply keyword-and-regex coding schema for Object / Action / Location injury mechanisms
+
+Aggregate mechanism frequencies by census tract; map using sf + ggplot2 choropleth overlaid on SVI
+
+Overlay IPV cluster map with HOLC grade boundaries; run chi-square test for association between mechanism severity and HOLC grade
+
+**Self-Graded Lab: Lab 12 — IPV Mechanism Extraction: Advanced NLP and Legal Evidence Mapping**
+
+- **Legal Focus:**  In 2-3 sentences, explain how pattern evidence from NLP-extracted injury mechanism data (e.g., 'strangulation appears in 34% of severe IPV narratives in high-SVI tracts') could be presented as legal evidence in a civil rights or public nuisance claim. What standard of statistical significance would a court require?
+- **Health Focus:**  Load the provided IPV narrative dataset. Using str_detect() with the provided regex pattern, flag all narratives containing strangulation-related terms ('choked', 'strangled', 'hands around neck'). What proportion of severe-coded cases involve strangulation? How does this compare to mild-coded cases?
+- **Data:**  The IPV dataset variables include: narrative (free text), severity (mild/moderate/severe), victim_sex, census_tract, holc_grade (A/B/C/D). Compute the frequency of each mechanism category (Object, Action, Location) by severity level and victim sex. Produce a grouped bar chart.
+- **R Code:**  Use dplyr::group_by(census_tract) and summarise(severe_count=sum(severity=='severe'), total=n()) to compute tract-level severity rates. Join to the Columbus shapefile and SVI data using left_join(). Produce a choropleth of severe IPV rate by tract overlaid with SVI quartile boundaries.
+- **check_answer() prompt:**  Using chisq.test(), is there a statistically significant association between IPV mechanism severity (mild/moderate/severe) and HOLC grade (A/B/C/D) in this dataset? Report the chi-square statistic and p-value.
+- **Reflection (100 words):**  Based on your NLP analysis, describe one specific injury mechanism pattern that ICD-coded data would systematically miss. Explain why detecting this pattern matters for both clinical intervention (what hospitals should do differently) and legal accountability (what it proves about the distribution of harm).
+
+## SECTION 3: From Evidence to Action — Communicating for Policy Change (Weeks 13-16)
+
+---
+
+
+### Week 13 | Apr 12-16 | Counting the Uncountable
+
+**Theme: Suicide, Self-Harm, and the Data Behind Prevention**
+
+Suicide is the second leading cause of death among people aged 10-34 in the United States, yet it is among the most undercounted causes of death in surveillance systems. This week we examine how surveillance systems capture suicide and self-harm data, what they miss, and how data-driven approaches can inform prevention policy. Note: This week's content addresses suicide and self-harm. OSU mental health resources: CCS at ccs.osu.edu or 614-292-5766. Crisis line: dial 988.
+
+
+> *Assignment 4 Check-In: Assignment 4 is due tonight. Your 10-minute recorded video should: (1) open by naming the specific community audience you are addressing; (2) show at least 3 visualizations or maps from your course labs, each narrated in plain language; (3) explain what the data shows and why it matters to that community; and (4) close with one concrete action the community can take or demand. Submit the video link (unlisted YouTube, Zoom recording, or file upload) AND your slide deck via Carmen.*
+
+**Required Readings**
+
+SEARCH: 'Hedegaard, Curtin & Warner (2021) Suicide mortality in the United States, 1999-2019. NCHS Data Brief No. 398' -- CDC NCHS website
+
+SEARCH: 'Klonsky, May & Saffer (2016) Suicide, suicide attempts, and suicidal ideation. Annual Review of Clinical Psychology 12' -- Google Scholar
+
+Lund, J. J., et al. (2023). Changes in self-harm and suicide in California from 2017-2021: a population-based study. UC Davis, preprint.*
+
+SAMHSA (2023). Key Substance Use and Mental Health Indicators in the United States: Results from the 2022 NSDUH.* [Chapter on suicide — Carmen]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Safe messaging guidelines (AFSP, SAMHSA) as professional ethical and legal standards for public health practitioners; mandatory reporting laws for suicide risk (varies by state); Mental Health Parity and Addiction Equity Act and its enforcement gaps; 988 Suicide and Crisis Lifeline as a legally mandated service.
+- **Health Focus:**  Age-standardized suicide mortality rates by county, sex, and race/ethnicity; the rural-urban gradient in suicide rates; the intersection of opioid use disorder and suicide risk — revisiting the opioid treatment desert analysis from Week 11 through a mental health lens.
+- **Data:**  CDC WISQARS (Web-based Injury Statistics Query and Reporting System — wisqars.cdc.gov) for county-level suicide mortality rates by age, sex, and race; NVDRS narrative excerpts (provided on Carmen, IRB-approved subset); Ohio ADI and SVI data from previous weeks; MOUD access isochrones from Week 11.
+- **R Code:**  Manually download WISQARS county-level data as CSV from wisqars.cdc.gov; join to county shapefile using FIPS; compute age-standardized rates using direct standardization with standard population weights; ggplot2 choropleth; compare spatial pattern to opioid treatment deserts using sf::st_join().
+Access CDC WISQARS (wisqars.cdc.gov); download Ohio county-level suicide mortality data by age group, sex, and race/ethnicity as CSV
+
+Load NVDRS narrative excerpts (Carmen IRB subset); apply tidytext to extract the most common circumstances preceding suicide death by race/ethnicity
+
+Map county-level age-standardized suicide rates using ggplot2 + sf; overlay ADI and SVI data
+
+Spatial overlay with Week 11 MOUD treatment desert map: identify counties with both high suicide rates and poor MOUD access — a dual crisis geography
+
+**Self-Graded Lab: Lab 13 — Suicide Surveillance: WISQARS Data, Spatial Analysis, and Safe Messaging**
+
+- **Legal Focus:**  In 2-3 sentences, explain what the Mental Health Parity and Addiction Equity Act (MHPAEA) requires of health insurers, and give one specific example of how a health insurer's failure to comply with MHPAEA could contribute to suicide mortality rates in rural counties.
+- **Health Focus:**  Load the provided WISQARS Ohio county data from Carmen. Compute age-standardized suicide rates for males and females separately using the provided standard population weights. Produce a choropleth map for each sex. Which counties appear in the highest quartile for both male and female rates?
+- **Data:**  Join the suicide rate data to the Week 11 MOUD treatment desert classification by county FIPS. Create a 2x2 classification: High Suicide Rate / Low MOUD Access (dual crisis); High Suicide Rate / Adequate MOUD Access; Low Suicide Rate / Low MOUD Access; Low Suicide Rate / Adequate MOUD Access. How many Ohio counties fall into the dual crisis category?
+- **R Code:**  Use cut() or case_when() to classify counties into the 4 categories above. Map the 4-category classification using scale_fill_manual() with 4 distinct colors. Produce a bar chart showing mean poverty rate (ADI) by category.
+- **check_answer() prompt:**  Which Ohio county has the highest age-standardized suicide rate for males aged 25-44? What is the ratio of the rural county mean rate to the urban county mean rate?
+- **Reflection (100 words):**  Describe one specific pattern from your spatial analysis — for example, a county that has high suicide rates but adequate MOUD access, or vice versa. What does this county's pattern suggest about what factor other than treatment access is driving its suicide rate?
+
+> **ASSIGNMENT 4 DUE TONIGHT Friday Apr 16 by 11:59 PM (submit video + slides via Carmen)**
+
+
+### Week 14 | Apr 19-23 | Speaking Truth to Power
+
+**Theme: Policy Briefs, Stakeholder Presentations, and Legal Advocacy**
+
+Data that never leaves the research file cabinet changes nothing. This week we shift from analysis to advocacy. We screen and discuss selected Assignment 4 community data story presentations as case studies in science communication. Peer evaluation of Assignment 4 is due this week. We begin curating and polishing the Final Portfolio.
+
+**Required Readings**
+
+SEARCH: 'Brennan Center for Justice: How to Write an Effective Policy Memo' -- brennancenter.org [free resource]
+
+WHO (2022). Storytelling for Health Impact: A Practitioner's Guide.* [Carmen -- read Part 1]
+
+SEARCH: 'Brownson, Chriqui & Stamatakis (2009) Understanding evidence-based public health policy. American Journal of Public Health 99(9)' -- Google Scholar
+
+NACCHO (2023). Advancing Public Narrative for Health Equity: Tools for Local Health Departments.* [Carmen]
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Legislative lobbying disclosure rules for 501(c)(3) organizations (IRS 501(h) election); the distinction between lobbying (restricted) and advocacy (permissible for nonprofits); community benefits agreements as legally binding contracts between developers and community organizations.
+- **Health Focus:**  Science communication as a public health practice; translating epidemiological findings into language that compels action; the WHO storytelling framework for health impact; how assignment 4 presentations can be evaluated for effectiveness with non-expert audiences.
+- **Data:**  Synthesis of all course datasets; GitHub repository structure for reproducible reporting; peer evaluation rubric for Assignment 4 (provided on Carmen).
+- **R Code:**  Final polish on any Shiny app elements; GitHub CLI or RStudio Git pane for repository commits; R Markdown framing notes for curated lab submissions; rmarkdown::render() to batch-knit multiple lab files.
+Screen and discuss 3-4 selected Assignment 4 presentations as class case studies; complete peer evaluation rubric
+
+Workshop: translating a regression coefficient table into 3-bullet executive insights for a city council memo
+
+GitHub lab: set up Final Portfolio repository structure (README.md, data/, analysis/, policy-memo/, reflection/)
+
+Begin drafting the new 3-page synthesis policy memo for the Final Portfolio
+
+**Self-Graded Lab: Lab 14 — Policy Translation: From Regression Table to Executive Brief**
+
+- **Legal Focus:**  Using the IRS 501(h) election rules summary provided on Carmen, classify each of the following activities as 'lobbying' (restricted), 'advocacy' (permissible), or 'neither': (a) publishing a report on opioid treatment deserts; (b) testifying before the Ohio legislature about a specific bill; (c) distributing a fact sheet to community members about their rights under MHPAEA.
+- **Health Focus:**  Load the provided regression output table (from a hypothetical maternal health study). Identify the three findings with the strongest policy implications. Write a 3-bullet executive summary using the Brennan Center template: each bullet should include a plain-language finding, a specific number, and a one-sentence implication — no jargon, no p-values.
+- **Data:**  Review your three curated lab files. For each, write a 150-word framing note that answers: (1) What was the research question? (2) What dataset did you use and where is it from? (3) What was the key finding? (4) Why did you select this lab for your portfolio?
+- **R Code:**  In RStudio, initialize a Git repository for your Final Portfolio folder (usethis::use_git()). Create a README.md using the provided template. Commit your three curated lab .Rmd files and their knitted HTML outputs. Push to GitHub.
+- **check_answer() prompt:**  Open your README.md on GitHub. Does it clearly state: (1) your course, (2) your health topic, (3) what datasets you used, and (4) how to reproduce your analysis? If any of these four elements are missing, add them now.
+- **Reflection (100 words):**  Watching the Assignment 4 peer presentations in class, identify one communication strategy that worked well — something that made the data feel urgent and relevant to the community audience. Describe it specifically and explain why it was effective.
+Peer evaluation of Assignment 4 due Friday Apr 23 via Carmen
+
+
+### Week 15 | Apr 22-26 | The Evidence-to-Power Pipeline
+
+**Theme: Ethics, Community Ownership, and the Future of Public Health Data Science**
+
+Who benefits when community data is published? Who controls it? Community Benefits Agreements, data sovereignty frameworks, and Indigenous data rights raise fundamental questions about the ethics of research-for-policy. We also reflect on the semester's arc and discuss where the field is heading: federated learning, synthetic data, and the risks and opportunities of large language models in population health surveillance.
+
+**Required Readings**
+
+The Turing Way Community (2022). The Turing Way: A Handbook for Reproducible, Ethical, and Collaborative Data Science.* [Chapter: Research Ethics, free at book.the-turing-way.org]
+
+SEARCH: 'Walter & Andersen (2013) Indigenous Statistics: A Quantitative Research Methodology. Left Coast Press' [Chapter 1, OSU Libraries]
+
+SEARCH: 'Obermeyer & Emanuel (2016) Predicting the future — big data, machine learning, and clinical medicine. NEJM 375(13)' -- Google Scholar
+
+SEARCH: 'CPH Competency Framework -- Integrating Equity and Ethics in Public Health Data Practice (2024)' -- cph.osu.edu
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  Community Benefits Agreements as legally binding contracts between municipalities/developers and community organizations; data sovereignty frameworks and Indigenous data rights (CARE Principles); IRB ethics and community-engaged research standards; FERPA, HIPAA, and the limits of de-identification.
+- **Health Focus:**  The evidence-to-power gap: why rigorous data often fails to change policy; community-engaged research as an alternative model; the future of public health data science — federated learning, synthetic data generation, and large language models as population health surveillance tools.
+- **Data:**  Synthesis and curation of the semester's lab work; GitHub repository as a professional portfolio artifact; peer portfolio audit checklist (provided on Carmen).
+- **R Code:**  rmarkdown::render() with clean environment to test reproducibility; usethis::use_readme_md() and usethis::use_github() for portfolio finalization; git commit and push from RStudio Git pane; final review of all code annotations and inline comments.
+Conduct structured peer audit of a classmate's GitHub portfolio using provided checklist rubric
+
+Finalize GitHub repository structure: README.md, data/, analysis/ (3 curated labs), policy-memo/, reflection/
+
+Polish all R Markdown reports — ensure code is annotated, outputs are labeled, and each document knits cleanly from a fresh session
+
+Write 400-word self-reflection: What did data show that policy missed?
+
+**Self-Graded Lab: Lab 15 — Portfolio Audit and Reproducibility Check**
+
+- **Legal Focus:**  In 2-3 sentences, explain the CARE Principles for Indigenous data governance (Collective benefit, Authority to control, Responsibility, Ethics). Give one example of how a public health research project using community survey data could violate the Authority principle — and what it should do instead.
+- **Health Focus:**  Open each of your three curated lab HTML outputs. For each, write one sentence that states the key public health finding in plain language that a community member (not a researcher) could understand and act on.
+- **Data:**  Run each of your three curated lab R Markdown files in a completely fresh R session (Session > Restart R, then Knit). If any file fails to knit, debug and fix the error. Document what you fixed in a brief note in the lab's README annotation.
+- **R Code:**  Open your Final Portfolio GitHub repository. Verify: (1) All .Rmd files are committed. (2) All knitted HTML files are in the repository. (3) The README.md links to each lab file and briefly describes it. (4) The policy-memo/ and reflection/ folders contain your final documents.
+- **check_answer() prompt:**  Does your new 3-page policy memo (not Assignment 3) draw evidence from at least two of your three curated labs? Does it name a specific decision-maker? Does it propose exactly one concrete recommendation with a specific geographic target?
+- **Reflection (100 words):**  Describe one specific thing you would do differently if you were re-doing this course's data analysis with a formal community partner involved from the beginning — for example, in selecting the research question, choosing the data, or interpreting the findings. Be specific about which week's lab you would change and how.
+Begin curating your 3 best labs for the Final Portfolio
+
+
+### Week 16 | Apr 28-30 | Finals Week
+
+**Theme: Final Portfolio Submission**
+
+No in-person class meetings during finals week. The Strategic Translation Portfolio is submitted via GitHub (link posted to Carmen) by Friday April 30 at 11:59 PM. The instructor will hold virtual office hours Monday April 28 and Tuesday April 29 for final questions.
+
+
+> *Assignment Final Check-In: Final Portfolio is due tonight at 11:59 PM. Your GitHub repository must contain: (1) 3 curated lab .Rmd files and their knitted HTML outputs, each with a 150-word framing note in the README; (2) a new 3-page policy memo in the policy-memo/ folder; (3) a 400-word self-reflection in the reflection/ folder; (4) a completed README.md. Graduate students: your literature synthesis must be in the repository. Submit your GitHub link — not the files themselves — via the Carmen assignment portal.*
+
+**Required Readings**
+
+Review your own work: does the portfolio tell a coherent story from data to policy recommendation?
+
+Ensure all code is annotated and reproducible by someone other than you.
+
+Read one article from the course that you disagreed with or found challenging — revisit your initial reaction.
+
+**Classroom Lab Demonstration**
+
+- **Legal Focus:**  No new legal content this week. Review: which of the 4 assignments engaged most directly with a specific legal doctrine? Write a sentence in your reflection connecting your data work to a specific law, statute, or regulation.
+- **Health Focus:**  No new health content this week. Ensure your final policy memo identifies the specific health outcome your evidence addresses, names the affected population, and cites the geographic scope of the problem.
+- **Data:**  Final GitHub repository review: all datasets should be documented in the README with source URLs; no raw data files over 50MB should be committed to GitHub (use .gitignore or link to external source instead).
+- **R Code:**  Final reproducibility check: restart R, clear environment, run each lab file start to finish. All packages should load without errors. If a package is not on CRAN, include installation instructions in the README.
+Final review of GitHub repository for completeness and reproducibility
+
+Confirm all three curated labs knit without errors in a completely fresh R session
+
+Final polish on new 3-page synthesis policy memo and 400-word self-reflection
+
+Submit GitHub repository link via Carmen by Friday April 30 at 11:59 PM
+
+**Self-Graded Lab: Lab 16 — Final Self-Check and Submission**
+
+Complete the Final Portfolio self-assessment checklist (Carmen): 3 curated labs with 150-word framing notes, new 3-page policy memo, 400-word self-reflection, GitHub README, graduate literature synthesis if applicable
+
+Run all three lab files in a fresh R session one final time; confirm they knit to HTML without errors; take a screenshot of the successful knit for your records
+
+- **check_answer() prompt:**  Does your policy memo: (a) cite at least 2 of your curated lab outputs as evidence? (b) name a specific decision-maker? (c) propose exactly one concrete recommendation? (d) acknowledge one data limitation? If any answer is no, fix it before submitting.
+Submit GitHub repository link via Carmen assignment portal by Friday April 30 at 11:59 PM
+
+Complete course self-assessment survey (Carmen) — counts toward participation grade
+
+FINAL PORTFOLIO (STRATEGIC TRANSLATION PORTFOLIO) DUE FRIDAY APRIL 30 by 11:59 PM
+

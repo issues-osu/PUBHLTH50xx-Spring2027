@@ -1,0 +1,29 @@
+# Course Policies
+
+## Class Policies
+
+### Attendance
+Attendance is expected at all lecture and Classroom Lab Demonstration sessions. The lab demonstration is the foundation for the self-graded weekly lab — missing it creates gaps that are hard to fill independently. Please notify the instructor before class when you must be absent. More than 3 unexcused absences will reduce your participation grade by one letter grade per additional absence. If you miss the in-class demonstration, the self-graded R Markdown lab is still due on Sunday.
+
+### Late Work
+Self-graded labs: accepted up to one week late for half credit (0.5 pts); no credit after one week. Assignments 1-4: 10% deduction per calendar day late; assignments more than 7 days late receive zero credit without prior written approval from the instructor. Final Portfolio: a 72-hour extension must be requested in writing before the deadline; no further extensions granted.
+
+### Generative AI Policy
+Generative AI tools (ChatGPT, Claude, Copilot, etc.) may be used as a writing or coding aid for self-graded lab assignments and the Final Portfolio with mandatory disclosure. Any AI use must be documented in a brief AI Use Statement at the end of your submission specifying which tool was used, for what purpose, and what you changed or verified. AI tools may not be used to generate the substantive policy analysis or interpretive writing in Assignments 3 or 4 — these must reflect your own reasoning. Undisclosed AI use constitutes academic misconduct.
+
+### Safe Messaging — Sensitive Topics
+This course addresses suicide, self-harm, intimate partner violence, substance use, and child abuse. We handle all these topics with scholarly rigor and human dignity. If content is distressing, please reach out to the instructor, your GTA, or OSU Counseling and Consultation Services (CCS) at ccs.osu.edu or 614-292-5766. Crisis line: dial 988 at any time.
+
+## University Policies
+
+### Disability Services
+The university strives to maintain a healthy and accessible environment to support student learning. If you anticipate or experience academic barriers based on your disability, please let me know immediately. To establish reasonable accommodations, please register with Student Life Disability Services (slds@osu.edu; 614-292-3307; slds.osu.edu).
+
+### Mental Health Services
+As a student you may experience a range of issues that can cause barriers to learning. The Ohio State University offers services to assist you with addressing these concerns via the Office of Student Life's Counseling and Consultation Service (CCS) by visiting [ccs.osu.edu](https://ccs.osu.edu) or calling 614-292-5766. 24 hour emergency help is also available 24/7 by dialing 988 to reach the Suicide and Crisis Lifeline.
+
+### Religious Accommodations
+Ohio State has a longstanding practice of making reasonable academic accommodations for students' religious beliefs and practices. Students must be in early communication with their instructors regarding any known accommodation requests within 14 days after the first instructional day of the course.
+
+### Academic Misconduct
+It is the responsibility of the Committee on Academic Misconduct to investigate or establish procedures for the investigation of all reported cases of student academic misconduct. The term 'academic misconduct' includes all forms of student academic misconduct wherever committed; illustrated by, but not limited to, cases of plagiarism and dishonest practices in connection with examinations.

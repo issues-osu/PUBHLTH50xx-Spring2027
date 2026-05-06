@@ -1,0 +1,76 @@
+# Objectives & Materials
+
+## Course Learning Objectives
+
+By the end of this course, students will be able to:
+
+- Critically evaluate publicly available health and social data to identify disparities in maternal and child health, gun violence, intimate partner violence, opioid use, suicide and self-harm, and adverse childhood experiences.
+- Apply intermediate-to-advanced R skills (tidyverse, sf, ggplot2, tidytext, Shiny) and QGIS to analyze and visualize community-level health data.
+- Conduct spatial analysis including buffer analysis, spatial joins, and Local Moran's I to identify geographic patterns of health inequity.
+- Explain the legal, physical, and social determinants of health and articulate how policy shapes population health outcomes.
+- Interpret and critically assess the role of historical policies (e.g., redlining, exclusionary zoning) in producing present-day health disparities.
+- Evaluate the ethical and legal implications of big data use in public health, including algorithmic bias, privacy, and data sovereignty.
+- Translate complex quantitative findings into actionable policy briefs and stakeholder presentations for non-technical audiences.
+- Collaborate with community partners to co-design data-driven public health recommendations.
+
+## Competencies
+
+This course addresses the following College of Public Health competencies. A complete list is located at [cph.osu.edu/students/competencies](https://cph.osu.edu/students/competencies).
+
+### BSPH Foundational Competencies
+- Apply the fundamental principles of the five core disciplines of public health to domestic and international population issues (1)
+- Communicate public health information, in both oral and written forms, through a variety of media and to diverse audiences (8)
+- Locate, use, evaluate and synthesize public health information (9)
+
+### BSPH Public Health Methods Specialization
+- Identify strengths and weaknesses of specific approaches to collecting health-related data (2)
+- Evaluate the strength of evidence from various study designs used in public health research (3)
+- Interpret scientific evidence to assess how various influences affect health outcomes at both the individual and population levels (4)
+
+### MPH Foundational Competencies
+- Apply epidemiological methods to settings and situations in public health practice (1)
+- Select quantitative and qualitative data collection methods appropriate for a given public health context (2)
+- Analyze quantitative and qualitative data using biostatistics, informatics, computer-based programming and software (3)
+- Interpret results of data analysis for public health research, policy or practice (4)
+- Discuss the means by which structural bias, social inequities and racism undermine health (6)
+- Assess population needs, assets and capacities that affect communities' health (7)
+- Design a population-based policy, program, project or intervention (9)
+- Select methods to evaluate public health programs (11)
+- Discuss the policy-making process, including the roles of ethics and evidence (12)
+- Advocate for political, social or economic policies and programs that will improve health (14)
+- Communicate audience-appropriate public health content (19)
+- Apply systems thinking tools to visually represent a public health issue (22)
+
+## Required Texts and Readings
+
+There is no single required textbook. All readings are drawn from peer-reviewed literature, government reports, and policy documents available via Carmen or open access online.
+
+### Key Anchor Books
+- **Rothstein, R. (2017).** *The Color of Law: A Forgotten History of How Our Government Segregated America.* Liveright. [Weeks 2, 7]
+- **Desmond, M. (2016).** *Evicted: Poverty and Profit in the American City.* Crown. [Weeks 8, 11]
+- **Benjamin, R. (2019).** *Race After Technology: Abolitionist Tools for the New Jim Code.* Polity. [Week 5]
+- **Sampson, R. J. (2012).** *Great American City: Chicago and the Enduring Neighborhood Effect.* University of Chicago Press. [Week 4]
+- **Wiley, L. F., & Gostin, L. O. (2025).** *Public Health Law and Ethics: Power, Duty, Restraint.* UC Press. [Weeks 1, 7]
+
+### Required R Resources (Free Online)
+- [R for Data Science (2nd ed.)](https://r4ds.hadley.nz/quarto.html) — Wickham, H. et al. (2023).
+- [Geocomputation with R (2nd ed.)](https://r.geocompx.org) — Lovelace, R. et al.
+- [Population Health Data Science with R](https://bookdown.org/medepi/phds) — Escamilla, V.
+- [Introduction to Regression Methods for Public Health Using R](https://019b2da8-edfb-a262-61be-7973c056d9ae.share.connect.posit.cloud/mlr-examine.html) — Nahhas, R. W.
+- Barboza-Salerno, G. *PUBHLTH 50xx: Translating Big Data into Public Health Policy — Course Website*. The Ohio State University. [[https://github.com/issues-osu/PUBHLTH50xx-Spring2027](https://github.com/issues-osu/PUBHLTH50xx-Spring2027)] — All weekly lab R Markdown files, datasets, demonstration code, and assignment templates are posted here and updated throughout the semester.
+
+## Class Format
+
+**Mode of Delivery:** In-person, two meetings per week: one 75-minute lecture/discussion session and one 75-minute Classroom Lab Demonstration.
+
+**Weekly Lab System:** During the Classroom Lab Demonstration, the instructor walks through the week's analysis live in R. Students then complete a self-graded take-home R Markdown document posted on Carmen. Students knit the completed document to HTML and submit via Carmen by Sunday 11:59 PM.
+
+**Credit Hours & Work Expectations:** Expect ~3 hours per week of direct instruction and ~6 hours of homework/active learning activities.
+
+**Attendance:** Attendance is expected at all lecture and Classroom Lab Demonstration sessions. More than three unexcused absences will affect your participation grade.
+
+## Course Technology
+
+- **Computer:** Mac (OSX) or PC (Windows 10+) with high-speed internet.
+- **Software:** R (v4.3+) and RStudio Desktop (free). QGIS (v3.x+) (free).
+- **Accounts:** GitHub account (free) for version control and portfolio submission. Microsoft 365 Copilot (free for OSU students).

@@ -1,0 +1,25 @@
+# Welcome to PUBHLTH 50xx {.unnumbered}
+
+Public health policy is driven by the strength of its evidence and the quality of its data. Behind every statistic is a story about people, communities, and the choices that shape health. This course examines how data are used to frame public health issues, identify disparities, assess interventions, and inform policy and decision-making.
+
+Students will work with real-world examples — injury prevention, overdose response, maternal and child health, gun violence, intimate partner violence, adverse childhood experiences, and housing insecurity — to explore how evidence promotes policy change and improves community well-being.
+
+The course emphasizes practical, applied learning through innovative open-source tools (R and QGIS). Each week combines a live Classroom Lab Demonstration with a self-graded take-home R Markdown lab that students complete at home and submit by Sunday. Four major graded assignments and a Final Portfolio build progressively across the semester.
+
+## Course Logistics
+
+**Instructor:** Dr. Gia Elise Barboza-Salerno, PhD  
+**Contact:** 216F Stillman Hall | 860-710-3705 | [barboza-salerno.1@osu.edu](mailto:barboza-salerno.1@osu.edu)  
+**Office Hours:** TBD
+
+**GTA:** [GTA Name]  
+**GTA Contact:** [email] | Hours: [Day/Time/Location]
+
+**Dates:** January 11 - April 30, 2027  
+**Location:** [Day / Time / Location]
+
+**Carmen:** [carmen.osu.edu](https://carmen.osu.edu) — All materials, assignments, and announcements posted here.  
+**Feedback & Response:** Grading feedback within 7 days. Email within 24 hours on school days.
+
+## Prerequisites
+Intermediate proficiency in R (tidyverse, regression). Equivalent of an introductory statistics course. Graduate students may substitute equivalent graduate-level methods coursework. Contact the instructor if you are unsure whether your background is sufficient.

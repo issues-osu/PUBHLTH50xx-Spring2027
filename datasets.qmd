@@ -1,0 +1,22 @@
+# Datasets
+
+This page catalogs all public datasets and proprietary extracts we will use throughout the semester.
+
+## Publicly Available Datasets
+
+| Dataset Name | Source | Format |
+|--------------|--------|--------|
+| **Opportunity Atlas** | [Opportunity Insights](https://www.opportunityinsights.org/data/) | CSV / Tract-level |
+| **HOLC "Redlining" Maps** | [Mapping Inequality](https://dsl.richmond.edu/panorama/redlining/) | Shapefiles |
+| **PLACES: Local Data for Better Health** | [CDC](https://www.cdc.gov/places/) | CSV / Tract-level |
+| **Social Vulnerability Index (SVI)** | [CDC ATSDR](https://www.atsdr.cdc.gov/placeandhealth/svi/) | CSV / Shapefile |
+| **EJScreen Environmental Justice Tool** | [EPA](https://www.epa.gov/ejscreen) | CSV / Geodatabase |
+| **Chicago Violence Reduction** | [Chicago Data Portal](https://data.cityofchicago.org/) | CSV / Point data |
+
+## Carmen Provided Datasets
+
+The following datasets require IRB approval, data use agreements, or significant pre-processing. They are provided as clean subsets on Carmen.
+
+- **NEISS IPV Narrative Subset:** De-identified emergency department narratives.
+- **Ohio MOUD Providers:** Filtered subset of SAMHSA provider data with computed drive-time isochrones.
+- **Boston Neighborhood Survey (BNS):** Longitudinal collective efficacy metrics.

@@ -1,0 +1,25 @@
+project:
+  type: book
+
+lang: en
+
+book:
+  title: "PUBHLTH 50xx: Translating Big Data into Public Health Policy"
+  author: "Dr. Gia Elise Barboza-Salerno"
+  date: "Spring 2027"
+  chapters:
+    - index.qmd
+    - objectives.qmd
+    - assignments.qmd
+    - schedule.qmd
+    - rcode.qmd
+    - datasets.qmd
+    - policies.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false
+    fontsize: 1.1em
+    mainfont: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
