@@ -1,8 +1,8 @@
 ---
-title: "Week 1: Data as Social Construct"
+title: "Week 1: The Social Construction of Public Health Evidence"
 ---
 
-## Theme: The Social Construction of Public Health Evidence
+## Theme
 
 Every dataset reflects choices about what to count, who counts, and who
 decides. This week we examine how framing shapes public health evidence

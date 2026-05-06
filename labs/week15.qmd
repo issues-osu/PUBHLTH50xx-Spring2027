@@ -1,9 +1,9 @@
 ---
-title: "Week 15: Putting it all together"
+title: "Week 15: Ethics, Community Ownership, and the Future of Public Health
+Data Science"
 ---
 
-## Theme: Ethics, Community Ownership, and the Future of Public Health
-Data Science
+## Theme
 
 Who benefits when community data is published? Who controls it?
 Community Benefits Agreements, data sovereignty frameworks, and

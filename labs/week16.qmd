@@ -1,8 +1,8 @@
 ---
-title: "Week 16: Finals Week"
+title: "Week 16: Final Portfolio Submission"
 ---
 
-## Theme: Final Portfolio Submission
+## Theme
 
 No in-person class meetings during finals week. The Strategic
 Translation Portfolio is submitted via GitHub (link posted to Carmen) by

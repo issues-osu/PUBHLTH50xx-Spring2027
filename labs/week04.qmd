@@ -1,8 +1,8 @@
 ---
-title: "Week 4: Social Cohesion and Health"
+title: "Week 4: Collective Efficacy, Trust, and Community Health"
 ---
 
-## Theme: Collective Efficacy, Trust, and Community Health
+## Theme
 
 Robert Sampson\'s landmark Chicago research established that collective
 efficacy --- a neighborhood\'s shared willingness to intervene for the

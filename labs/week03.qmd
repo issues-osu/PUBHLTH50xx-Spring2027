@@ -1,8 +1,8 @@
 ---
-title: "Week 3: Mapping What We See and What We Fear"
+title: "Week 3: The Built Environment: Street-Level Data and Perceived Safety"
 ---
 
-## Theme: The Built Environment: Street-Level Data and Perceived Safety
+## Theme
 
 Does a neighborhood feel safe? And does that feeling match reality?
 Street-level imagery and computer vision tools allow us to quantify the

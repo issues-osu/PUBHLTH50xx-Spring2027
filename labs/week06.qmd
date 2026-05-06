@@ -1,8 +1,8 @@
 ---
-title: "Week 6: The Stories Clinical Data Won't Tell You"
+title: "Week 6: NLP and Injury Surveillance: Reading the Invisible"
 ---
 
-## Theme: NLP and Injury Surveillance: Reading the Invisible
+## Theme
 
 Structured data --- ICD codes, admission diagnoses --- systematically
 misses the context of injury. A woman admitted for \'facial trauma\' may

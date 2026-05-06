@@ -1,9 +1,9 @@
 ---
-title: "Week 12: The Hidden Epidemic"
+title: "Week 12: Intimate Partner Violence: Surveillance, Narratives, and Legal
+Evidence"
 ---
 
-## Theme: Intimate Partner Violence: Surveillance, Narratives, and Legal
-Evidence
+## Theme
 
 Intimate partner violence is systematically underreported in structured
 data. Emergency department codes, police records, and death certificates

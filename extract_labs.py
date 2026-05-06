@@ -55,11 +55,11 @@ for i, match in enumerate(matches):
     
     if demo_content or lab_content:
         # Build QMD content
-        clean_title = week_title.replace("\\'", "'").replace('\\"', '"')
+        clean_title = theme_title.replace("\\'", "'").replace('\\"', '"') if theme_title else week_title.replace("\\'", "'").replace('\\"', '"')
         qmd = f"---\ntitle: \"Week {week_num}: {clean_title}\"\n---\n\n"
         
-        if theme_title:
-            qmd += f"## Theme: {theme_title}\n\n{theme_desc}\n\n"
+        if theme_desc:
+            qmd += f"## Theme\n\n{theme_desc}\n\n"
             
         if demo_content:
             qmd += f"## Classroom Lab Demonstration\n\n{demo_content}\n\n"

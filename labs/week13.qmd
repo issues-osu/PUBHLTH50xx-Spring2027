@@ -1,8 +1,8 @@
 ---
-title: "Week 13: Counting the Uncountable"
+title: "Week 13: Suicide, Self-Harm, and the Data Behind Prevention"
 ---
 
-## Theme: Suicide, Self-Harm, and the Data Behind Prevention
+## Theme
 
 Suicide is the second leading cause of death among people aged 10-34 in
 the United States, yet it is among the most undercounted causes of death

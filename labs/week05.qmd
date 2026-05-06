@@ -1,8 +1,8 @@
 ---
-title: "Week 5: Who Does the Algorithm Think You Are?"
+title: "Week 5: Algorithmic Accountability, Bias, and Political Geography"
 ---
 
-## Theme: Algorithmic Accountability, Bias, and Political Geography
+## Theme
 
 Predictive risk models now influence who gets flagged for child welfare
 investigation, who is triaged first in an emergency department, and who
