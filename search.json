@@ -214,17 +214,7 @@
     "href": "datasets.html#publicly-available-datasets",
     "title": "Datasets",
     "section": "",
-    "text": "Dataset Name\nSource\nFormat\n\n\n\n\nOpportunity Atlas\nOpportunity Insights\nCSV / Tract-level\n\n\nHOLC “Redlining” Maps\nMapping Inequality\nShapefiles\n\n\nPLACES: Local Data for Better Health\nCDC\nCSV / Tract-level\n\n\nSocial Vulnerability Index (SVI)\nCDC ATSDR\nCSV / Shapefile\n\n\nEJScreen Environmental Justice Tool\nEPA\nCSV / Geodatabase\n\n\nChicago Violence Reduction\nChicago Data Portal\nCSV / Point data",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Datasets</span>"
-    ]
-  },
-  {
-    "objectID": "datasets.html#carmen-provided-datasets",
-    "href": "datasets.html#carmen-provided-datasets",
-    "title": "Datasets",
-    "section": "Carmen Provided Datasets",
-    "text": "Carmen Provided Datasets\nThe following datasets require IRB approval, data use agreements, or significant pre-processing. They are provided as clean subsets on Carmen.\n\nNEISS IPV Narrative Subset: De-identified emergency department narratives.\nOhio MOUD Providers: Filtered subset of SAMHSA provider data with computed drive-time isochrones.\nBoston Neighborhood Survey (BNS): Longitudinal collective efficacy metrics.",
+    "text": "Dataset Name\nSource\nFormat\n\n\n\n\nOpportunity Atlas\nOpportunity Insights\nCSV / Tract-level\n\n\nHOLC “Redlining” Maps\nMapping Inequality\nShapefiles\n\n\nPLACES: Local Data for Better Health\nCDC\nCSV / Tract-level\n\n\nSocial Vulnerability Index (SVI)\nCDC ATSDR\nCSV / Shapefile\n\n\nEJScreen Environmental Justice Tool\nEPA\nCSV / Geodatabase\n\n\nChicago Violence Reduction\nChicago Data Portal\nCSV / Point data\n\n\nNEISS IPV Narrative Subset\nCPSC NEISS\nText / CSV\n\n\nOhio MOUD Providers\nSAMHSA\nCSV / Spatial\n\n\nBoston Neighborhood Survey (BNS)\nBNS Data\nLongitudinal CSV",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Datasets</span>"
     ]
